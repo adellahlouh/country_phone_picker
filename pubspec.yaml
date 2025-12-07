@@ -1,7 +1,7 @@
 name: country_phone_picker
 description: "A new Flutter project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/adellahlouh/country_phone_picker.git
 
 environment:
   sdk: ^3.7.2
