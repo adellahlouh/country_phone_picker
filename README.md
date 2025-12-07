@@ -18,7 +18,6 @@ Add this package to your `pubspec.yaml` file:
 ```yaml
 dependencies:
   country_phone_picker: ^0.0.1
-  country_flags: ^3.3.0
   flutter_localizations:
     sdk: flutter
 ```
