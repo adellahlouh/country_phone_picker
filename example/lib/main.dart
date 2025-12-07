@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:country_phone_picker/country_phone_picker.dart';
-import 'package:country_phone_picker/country_phone_picker.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() => runApp(const MyApp());
