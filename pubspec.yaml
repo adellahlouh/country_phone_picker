@@ -1,6 +1,6 @@
 name: country_phone_picker
 description: "A Flutter package for selecting country phone codes."
-version: 0.0.1+3
+version: 0.0.1+4
 homepage: https://github.com/adellahlouh/country_phone_picker.git
 
 platforms:

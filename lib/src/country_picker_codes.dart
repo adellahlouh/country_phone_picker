@@ -4,7 +4,7 @@ const List<Map<String, dynamic>> codes = [
     "name": "الأردن",
     "isoCode": "JO",
     "dialCode": "+962",
-    "hintText": "77-XXXXXXX",
+    "hintText": "7X-XXXXXXX",
     "lengthNumber": 9,
     "phoneStartsWith": ["77", "78", "79"],
     "icon": "🇯🇴"
