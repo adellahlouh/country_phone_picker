@@ -1,3 +1,13 @@
+import 'country_model.dart';
+
+List<CountryModel>? _cachedCountries;
+
+/// Parsed country list, built once for the process lifetime.
+List<CountryModel> get allCountries =>
+    _cachedCountries ??= List<CountryModel>.unmodifiable(
+      codes.map(CountryModel.fromJson),
+    );
+
 const List<Map<String, dynamic>> codes = [
   {
     "code": 85,

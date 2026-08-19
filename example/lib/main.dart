@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:country_phone_picker/country_phone_picker.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() => runApp(const MyApp());
@@ -10,15 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Add supported locales
+      title: 'Country Phone Picker',
       supportedLocales: const [
         Locale('en'),
         Locale('ar'),
         Locale('es'),
         Locale('fr'),
-        // Add more locales as needed
       ],
-      // Add localization delegates
       localizationsDelegates: const [
         CountryPickerLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -38,7 +36,7 @@ class PhoneInputExample extends StatefulWidget {
 }
 
 class _PhoneInputExampleState extends State<PhoneInputExample> {
-  CountryModel? selectedCountry;
+  CountryModel selectedCountry = CountryModel.initialModel();
   final TextEditingController phoneController = TextEditingController();
 
   @override
@@ -49,10 +47,13 @@ class _PhoneInputExampleState extends State<PhoneInputExample> {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = CountryPickerLocalizations.of(context);
+    final countryName =
+        localizations?.translate(selectedCountry.isoCode) ??
+        selectedCountry.name;
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Phone Number Input'),
-      ),
+      appBar: AppBar(title: const Text('Phone Number Input')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -65,9 +66,28 @@ class _PhoneInputExampleState extends State<PhoneInputExample> {
             const SizedBox(height: 16),
             Row(
               children: [
-                // Country Picker
                 CountryPhonePicker(
                   bottomSheetTitle: 'Choose Country',
+                  bottomSheetConfig: BottomSheetConfig(
+                    closeIcon: const Icon(Icons.arrow_back_rounded),
+                    titleStyle: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    radioActiveColor: Colors.deepPurple,
+                    initialHeightFactor: 0.6,
+                    expandedHeightFactor: 0.95,
+                    searchConfig: SearchConfig(
+                      hintText: 'Search country or code',
+                      filled: true,
+                      fillColor: Colors.deepPurple.shade50,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: BorderSide.none,
+                      ),
+                      contentPadding: EdgeInsets.zero,
+                    ),
+                  ),
                   onChanged: (CountryModel country) {
                     setState(() {
                       selectedCountry = country;
@@ -75,13 +95,12 @@ class _PhoneInputExampleState extends State<PhoneInputExample> {
                   },
                 ),
                 const SizedBox(width: 8),
-                // Phone Number Input
                 Expanded(
                   child: TextField(
                     controller: phoneController,
                     keyboardType: TextInputType.phone,
                     decoration: InputDecoration(
-                      hintText: selectedCountry?.hintText ?? 'Phone number',
+                      hintText: selectedCountry.hintText ?? 'Phone number',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -93,39 +112,38 @@ class _PhoneInputExampleState extends State<PhoneInputExample> {
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () {
-                if (selectedCountry != null && phoneController.text.isNotEmpty) {
-                  final fullNumber = '${selectedCountry!.dialCode}${phoneController.text}';
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text('Phone number: $fullNumber'),
-                    ),
-                  );
+                if (phoneController.text.isEmpty) {
+                  return;
                 }
+                final fullNumber =
+                    '${selectedCountry.dialCode}${phoneController.text}';
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text('Phone number: $fullNumber')),
+                );
               },
               child: const Text('Submit'),
             ),
-
-            if (selectedCountry != null)
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Country: ${selectedCountry!.name}'),
-                      Text('Dial Code: ${selectedCountry!.dialCode}'),
-                      Text('ISO Code: ${selectedCountry!.isoCode}'),
-                      Text('Phone Length: ${selectedCountry!.lengthNumber}'),
-                      Text('Starts With: ${selectedCountry!.phoneStartsWith.join(", ")}'),
-                    ],
-                  ),
+            const SizedBox(height: 24),
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Country: $countryName'),
+                    Text('Dial Code: ${selectedCountry.dialCode}'),
+                    Text('ISO Code: ${selectedCountry.isoCode}'),
+                    Text('Phone Length: ${selectedCountry.lengthNumber}'),
+                    Text(
+                      'Starts With: ${selectedCountry.phoneStartsWith.join(", ")}',
+                    ),
+                  ],
                 ),
               ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-
