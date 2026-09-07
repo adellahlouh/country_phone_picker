@@ -9,6 +9,7 @@ A Flutter package for selecting countries with phone codes. It provides a bottom
 - Built-in search by country name, dial code, or ISO code
 - Localized country names (69 languages)
 - Phone length and valid starting digits per country
+- Set the initial country with an ISO code (`initialCountryCode: 'US'`)
 - Simple `CountryPhonePicker` widget for quick integration
 - Performance: country data is parsed once, search runs only when the query changes, and keyboard animation does not rebuild the list
 
@@ -18,7 +19,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  country_phone_picker: ^0.0.2
+  country_phone_picker: ^0.0.3
   flutter_localizations:
     sdk: flutter
 ```
@@ -27,6 +28,24 @@ Then run:
 
 ```bash
 flutter pub get
+```
+
+### Migrating from 0.0.2
+
+Replace a full `CountryModel` with its ISO code. Use `findCountryByIsoCode` if you still need the model for hints or validation:
+
+```dart
+// Before
+CountryPhonePicker(
+  initialCountry: myCountryModel,
+  ...
+)
+
+// After
+CountryPhonePicker(
+  initialCountryCode: 'US',
+  ...
+)
 ```
 
 ## Basic Usage
@@ -71,6 +90,7 @@ class MyApp extends StatelessWidget {
 ```dart
 CountryPhonePicker(
   bottomSheetTitle: 'Choose Country',
+  initialCountryCode: 'US',
   bottomSheetConfig: BottomSheetConfig(
     closeIcon: Image.asset(
       'assets/icons/close.png',
@@ -106,7 +126,10 @@ class PhoneInputExample extends StatefulWidget {
 }
 
 class _PhoneInputExampleState extends State<PhoneInputExample> {
-  CountryModel selectedCountry = CountryModel.initialModel();
+  static const String _initialCountryCode = 'US';
+
+  CountryModel selectedCountry =
+      findCountryByIsoCode(_initialCountryCode) ?? CountryModel.initialModel();
   final TextEditingController phoneController = TextEditingController();
 
   @override
@@ -128,6 +151,7 @@ class _PhoneInputExampleState extends State<PhoneInputExample> {
               children: [
                 CountryPhonePicker(
                   bottomSheetTitle: 'Choose Country',
+                  initialCountryCode: _initialCountryCode,
                   onChanged: (CountryModel country) {
                     setState(() => selectedCountry = country);
                   },
@@ -182,7 +206,7 @@ flutter run
 | `onChanged` | `ValueChanged<CountryModel>` | Yes | Called when a country is selected |
 | `bottomSheetTitle` | `String` | Yes | Title shown at the top of the bottom sheet |
 | `bottomSheetConfig` | `BottomSheetConfig` | No | Bottom sheet appearance; defaults to the standard package design |
-| `initialCountry` | `CountryModel?` | No | Country shown before the user picks one; defaults to Jordan |
+| `initialCountryCode` | `String?` | No | ISO 3166-1 alpha-2 code (e.g. `"US"`) shown before the user picks one. Case-insensitive. `null`, empty, and unknown codes default to Jordan |
 | `key` | `Key?` | No | Widget key |
 
 ### `BottomSheetConfig`
@@ -300,6 +324,29 @@ SearchConfig(
 - `CountryModel.initialModel()` — default country (Jordan / `JO` / `+962`)
 - `CountryModel.fromJson(Map<String, dynamic> json)` — create from a map
 
+### `findCountryByIsoCode`
+
+Looks up a country from the package list by ISO 3166-1 alpha-2 code (case-insensitive). Returns `null` if the code is unknown.
+
+Use the same code you pass to `CountryPhonePicker` so the rest of your UI (hint, length, prefixes) matches the flag on first frame:
+
+```dart
+const iso = 'US';
+final country = findCountryByIsoCode(iso) ?? CountryModel.initialModel();
+
+CountryPhonePicker(
+  bottomSheetTitle: 'Choose Country',
+  initialCountryCode: iso,
+  onChanged: (next) { /* ... */ },
+);
+
+TextField(
+  decoration: InputDecoration(
+    hintText: country.hintText ?? 'Phone number',
+  ),
+);
+```
+
 To show a localized name in your own UI:
 
 ```dart
@@ -366,7 +413,7 @@ CountryPhonePicker(
 
 ## Default country
 
-The picker starts with Jordan:
+When `initialCountryCode` is omitted, the picker starts with Jordan:
 
 | Field | Value |
 |-------|-------|
@@ -380,7 +427,7 @@ The picker starts with Jordan:
 ## Dependencies
 
 - `flutter` (SDK)
-- [`country_flags`](https://pub.dev/packages/country_flags) `^3.3.0`
+- [`country_flags`](https://pub.dev/packages/country_flags) `^4.1.2`
 
 ## Requirements
 

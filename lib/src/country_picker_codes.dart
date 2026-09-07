@@ -1,12 +1,21 @@
 import 'country_model.dart';
 
 List<CountryModel>? _cachedCountries;
+Map<String, CountryModel>? _countriesByIso;
 
 /// Parsed country list, built once for the process lifetime.
 List<CountryModel> get allCountries =>
     _cachedCountries ??= List<CountryModel>.unmodifiable(
       codes.map(CountryModel.fromJson),
     );
+
+/// Looks up a country by ISO 3166-1 alpha-2 code (case-insensitive).
+CountryModel? findCountryByIsoCode(String isoCode) {
+  _countriesByIso ??= {
+    for (final country in allCountries) country.isoCode: country,
+  };
+  return _countriesByIso![isoCode.toUpperCase()];
+}
 
 const List<Map<String, dynamic>> codes = [
   {
@@ -24,7 +33,7 @@ const List<Map<String, dynamic>> codes = [
     "name": "العراق",
     "isoCode": "IQ",
     "dialCode": "+964",
-    "hintText": "71-XXXXXXXX",
+    "hintText": "7X-XXXXXXXX",
     "lengthNumber": 10,
     "phoneStartsWith": ["71", "73", "74"],
     "icon": "🇮🇶"
@@ -34,7 +43,7 @@ const List<Map<String, dynamic>> codes = [
     "name": "مصر",
     "isoCode": "EG",
     "dialCode": "+20",
-    "hintText": "10-XXXXXXXX",
+    "hintText": "1X-XXXXXXXX",
     "lengthNumber": 10,
     "phoneStartsWith": ["10", "11", "12"],
     "icon": "🇪🇬"
@@ -44,7 +53,7 @@ const List<Map<String, dynamic>> codes = [
     "name": "السعودية",
     "isoCode": "SA",
     "dialCode": "+966",
-    "hintText": "50-XXXXXX",
+    "hintText": "5X-XXXXXX",
     "lengthNumber": 9,
     "phoneStartsWith": ["50", "54", "55"],
     "icon": "🇸🇦"
@@ -54,7 +63,7 @@ const List<Map<String, dynamic>> codes = [
     "name": "عُمان",
     "isoCode": "OM",
     "dialCode": "+968",
-    "hintText": "90-XXXXX",
+    "hintText": "9X-XXXXX",
     "lengthNumber": 8,
     "phoneStartsWith": ["90", "91", "92"],
     "icon": "🇴🇲"
@@ -64,7 +73,7 @@ const List<Map<String, dynamic>> codes = [
     "name": "قطر",
     "isoCode": "QA",
     "dialCode": "+974",
-    "hintText": "33-XXXXX",
+    "hintText": "3X-XXXXX",
     "lengthNumber": 8,
     "phoneStartsWith": ["33", "34", "35"],
     "icon": "🇶🇦"
@@ -74,7 +83,7 @@ const List<Map<String, dynamic>> codes = [
     "name": "فلسطين",
     "isoCode": "PS",
     "dialCode": "+970",
-    "hintText": "5-XXXXXX",
+    "hintText": "5X-XXXXXX",
     "lengthNumber": 8,
     "phoneStartsWith": ["5", "56", "59"],
     "icon": "🇵🇸"

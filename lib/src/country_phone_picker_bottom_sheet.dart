@@ -486,9 +486,11 @@ class _CountryRow extends StatelessWidget {
               ),
               CountryFlag.fromCountryCode(
                 country.isoCode,
-                shape: config.flagShape,
-                width: config.flagWidth,
-                height: config.flagHeight,
+                theme: ImageTheme(
+                  shape: config.flagShape,
+                  width: config.flagWidth,
+                  height: config.flagHeight,
+                ),
               ),
               SizedBox(width: config.flagSpacing),
               Expanded(

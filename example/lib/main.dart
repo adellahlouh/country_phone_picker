@@ -36,7 +36,10 @@ class PhoneInputExample extends StatefulWidget {
 }
 
 class _PhoneInputExampleState extends State<PhoneInputExample> {
-  CountryModel selectedCountry = CountryModel.initialModel();
+  static const String _initialCountryCode = 'IQ';
+
+  CountryModel selectedCountry =
+      findCountryByIsoCode(_initialCountryCode) ?? CountryModel.initialModel();
   final TextEditingController phoneController = TextEditingController();
 
   @override
@@ -93,6 +96,7 @@ class _PhoneInputExampleState extends State<PhoneInputExample> {
                       selectedCountry = country;
                     });
                   },
+                  initialCountryCode: _initialCountryCode,
                 ),
                 const SizedBox(width: 8),
                 Expanded(
@@ -134,6 +138,7 @@ class _PhoneInputExampleState extends State<PhoneInputExample> {
                     Text('Dial Code: ${selectedCountry.dialCode}'),
                     Text('ISO Code: ${selectedCountry.isoCode}'),
                     Text('Phone Length: ${selectedCountry.lengthNumber}'),
+                    Text('Hint: ${selectedCountry.hintText}'),
                     Text(
                       'Starts With: ${selectedCountry.phoneStartsWith.join(", ")}',
                     ),

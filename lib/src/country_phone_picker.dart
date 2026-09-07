@@ -2,6 +2,7 @@ import 'package:country_flags/country_flags.dart';
 import 'package:country_phone_picker/src/bottom_sheet_config.dart';
 import 'package:country_phone_picker/src/country_model.dart';
 import 'package:country_phone_picker/src/country_phone_picker_bottom_sheet.dart';
+import 'package:country_phone_picker/src/country_picker_codes.dart';
 import 'package:flutter/material.dart';
 
 class CountryPhonePicker extends StatefulWidget {
@@ -9,16 +10,17 @@ class CountryPhonePicker extends StatefulWidget {
   final String bottomSheetTitle;
   final BottomSheetConfig bottomSheetConfig;
 
-  /// Country shown initially (and kept in sync when the parent updates it).
-  /// Defaults to [CountryModel.initialModel] when null.
-  final CountryModel? initialCountry;
+  /// ISO 3166-1 alpha-2 code of the country shown initially (e.g. `'US'`).
+  /// Kept in sync when the parent updates it. Defaults to Jordan when null
+  /// or unrecognized.
+  final String? initialCountryCode;
 
   const CountryPhonePicker({
     super.key,
     required this.onChanged,
     required this.bottomSheetTitle,
     this.bottomSheetConfig = const BottomSheetConfig(),
-    this.initialCountry,
+    this.initialCountryCode,
   });
 
   @override
@@ -28,19 +30,29 @@ class CountryPhonePicker extends StatefulWidget {
 class _CountryPhonePickerState extends State<CountryPhonePicker> {
   late CountryModel selectedCountryModel;
 
+  CountryModel _resolveCountry(String? isoCode) {
+    if (isoCode == null || isoCode.isEmpty) {
+      return CountryModel.initialModel();
+    }
+    final country = findCountryByIsoCode(isoCode);
+    assert(
+      country != null,
+      'Unknown initialCountryCode "$isoCode"; falling back to Jordan.',
+    );
+    return country ?? CountryModel.initialModel();
+  }
+
   @override
   void initState() {
     super.initState();
-    selectedCountryModel =
-        widget.initialCountry ?? CountryModel.initialModel();
+    selectedCountryModel = _resolveCountry(widget.initialCountryCode);
   }
 
   @override
   void didUpdateWidget(covariant CountryPhonePicker oldWidget) {
     super.didUpdateWidget(oldWidget);
-    final next = widget.initialCountry;
-    if (next != null && next.isoCode != selectedCountryModel.isoCode) {
-      selectedCountryModel = next;
+    if (widget.initialCountryCode != oldWidget.initialCountryCode) {
+      selectedCountryModel = _resolveCountry(widget.initialCountryCode);
     }
   }
 
@@ -84,15 +96,14 @@ class _CountryPhonePickerState extends State<CountryPhonePicker> {
           const SizedBox(width: 14.0),
           CountryFlag.fromCountryCode(
             selectedCountryModel.isoCode,
-            shape: const RoundedRectangle(4),
-            width: 28,
-            height: 24,
+            theme: ImageTheme(
+              shape: const RoundedRectangle(4),
+              width: 28,
+              height: 24,
+            ),
           ),
           const SizedBox(width: 4.0),
-          Text(
-            selectedCountryModel.dialCode,
-            textDirection: TextDirection.ltr,
-          ),
+          Text(selectedCountryModel.dialCode, textDirection: TextDirection.ltr),
         ],
       ),
     );

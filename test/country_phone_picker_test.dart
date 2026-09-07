@@ -136,6 +136,30 @@ void main() {
     expect(selectedCountry?.dialCode, '+964');
   });
 
+  testWidgets('resolves initialCountryCode from the country list', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: CountryPhonePicker(
+            bottomSheetTitle: 'Choose Country',
+            initialCountryCode: 'IQ',
+            onChanged: (_) {},
+          ),
+        ),
+      ),
+    );
+
+    expect(find.text('+964'), findsOneWidget);
+  });
+
+  test('findCountryByIsoCode is case-insensitive', () {
+    expect(findCountryByIsoCode('iq')?.isoCode, 'IQ');
+    expect(findCountryByIsoCode('IQ')?.dialCode, '+964');
+    expect(findCountryByIsoCode('xx'), isNull);
+  });
+
   testWidgets('shows the search field with its configured hint', (
     tester,
   ) async {
@@ -364,22 +388,12 @@ void main() {
   });
 
   testWidgets('opens scrolled to the selected country', (tester) async {
-    const selected = CountryModel(
-      code: 187,
-      name: 'United States',
-      isoCode: 'US',
-      dialCode: '+1',
-      hintText: '(XXX) XXX-XXXX',
-      lengthNumber: 10,
-      phoneStartsWith: [],
-    );
-
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
           body: CountryPhonePicker(
             bottomSheetTitle: 'Choose Country',
-            initialCountry: selected,
+            initialCountryCode: 'US',
             onChanged: (_) {},
           ),
         ),
@@ -399,22 +413,12 @@ void main() {
   testWidgets('stays at the top when scrolling to the selection is off', (
     tester,
   ) async {
-    const selected = CountryModel(
-      code: 187,
-      name: 'United States',
-      isoCode: 'US',
-      dialCode: '+1',
-      hintText: '(XXX) XXX-XXXX',
-      lengthNumber: 10,
-      phoneStartsWith: [],
-    );
-
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
           body: CountryPhonePicker(
             bottomSheetTitle: 'Choose Country',
-            initialCountry: selected,
+            initialCountryCode: 'US',
             bottomSheetConfig: const BottomSheetConfig(
               scrollToSelected: false,
             ),

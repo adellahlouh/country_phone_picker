@@ -1,3 +1,10 @@
+## 0.0.3
+
+* **Breaking:** `initialCountry` (`CountryModel?`) is now `initialCountryCode` (`String?`, ISO 3166-1 alpha-2, case-insensitive). The picker fills dial code, flag, hint, and the rest from the country list. `null`, empty, and unknown codes fall back to Jordan.
+* Add `findCountryByIsoCode` so host apps can resolve the same ISO code (for example to set a phone field hint).
+* Bump `country_flags` to `^4.1.2` and pass flag size/shape through `ImageTheme`.
+* Update phone hints for Iraq, Egypt, Saudi Arabia, Oman, Qatar, and Palestine to use `X` placeholders.
+
 ## 0.0.2
 
 * Search countries in the bottom sheet by name, dial code, or ISO code.
