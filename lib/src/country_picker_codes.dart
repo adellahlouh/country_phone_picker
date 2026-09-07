@@ -55,7 +55,7 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+966",
     "hintText": "5X-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": ["50", "54", "55"],
+    "phoneStartsWith": ["5"],
     "icon": "🇸🇦"
   },
   {
