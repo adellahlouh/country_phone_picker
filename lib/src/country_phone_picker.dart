@@ -15,12 +15,26 @@ class CountryPhonePicker extends StatefulWidget {
   /// or unrecognized.
   final String? initialCountryCode;
 
+  /// Whether the search field is shown in the bottom sheet.
+  ///
+  /// The field is shown only when this is `true` and
+  /// [BottomSheetConfig.searchConfig] is enabled.
+  final bool showSearch;
+
+  /// ISO 3166-1 alpha-2 codes to keep in the list (e.g. `['JO', 'SA']`).
+  ///
+  /// `null` or empty shows every country. Unknown codes are skipped. If none
+  /// of the codes match a supported country, the full list is shown.
+  final List<String>? allowedCountryCodes;
+
   const CountryPhonePicker({
     super.key,
     required this.onChanged,
     required this.bottomSheetTitle,
     this.bottomSheetConfig = const BottomSheetConfig(),
     this.initialCountryCode,
+    this.showSearch = true,
+    this.allowedCountryCodes,
   });
 
   @override
@@ -75,6 +89,8 @@ class _CountryPhonePickerState extends State<CountryPhonePicker> {
               selectedCountryCode: selectedCountryModel,
               bottomSheetTitle: widget.bottomSheetTitle,
               config: widget.bottomSheetConfig,
+              showSearch: widget.showSearch,
+              allowedCountryCodes: widget.allowedCountryCodes,
             );
           },
         );

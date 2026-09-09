@@ -5,12 +5,16 @@ import 'package:flutter_test/flutter_test.dart';
 Widget _buildPicker({
   BottomSheetConfig config = const BottomSheetConfig(),
   ValueChanged<CountryModel>? onChanged,
+  bool showSearch = true,
+  List<String>? allowedCountryCodes,
 }) {
   return MaterialApp(
     home: Scaffold(
       body: CountryPhonePicker(
         bottomSheetTitle: 'Choose Country',
         bottomSheetConfig: config,
+        showSearch: showSearch,
+        allowedCountryCodes: allowedCountryCodes,
         onChanged: onChanged ?? (_) {},
       ),
     ),
@@ -34,6 +38,18 @@ Finder _inList(Finder finder) {
 }
 
 void main() {
+  test('countriesForIsoCodes keeps caller order and skips unknown codes', () {
+    final all = countriesForIsoCodes(null);
+    expect(countriesForIsoCodes(const []), all);
+    expect(countriesForIsoCodes(const ['XX']), all);
+    expect(
+      countriesForIsoCodes(const ['sa', 'JO', 'XX', 'JO'])
+          .map((country) => country.isoCode)
+          .toList(),
+      ['SA', 'JO'],
+    );
+  });
+
   test('does not claim locales that have no bundled translations', () {
     expect(
       CountryPickerLocalizations.delegate.isSupported(const Locale('tk')),
@@ -447,4 +463,61 @@ void main() {
     expect(find.byType(TextField), findsNothing);
     expect(_inList(find.text('+962')), findsOneWidget);
   });
+
+  testWidgets('hides the search field when showSearch is false', (tester) async {
+    await tester.pumpWidget(_buildPicker(showSearch: false));
+
+    await _openSheet(tester);
+
+    expect(find.byType(TextField), findsNothing);
+    expect(_inList(find.text('+962')), findsOneWidget);
+  });
+
+  testWidgets('limits the list to allowed country codes', (tester) async {
+    await tester.pumpWidget(
+      _buildPicker(allowedCountryCodes: const ['JO', 'SA']),
+    );
+
+    await _openSheet(tester);
+
+    expect(_listItemCount(tester), 2);
+    expect(_inList(find.text('+962')), findsOneWidget);
+    expect(_inList(find.text('+966')), findsOneWidget);
+    expect(_inList(find.text('+20')), findsNothing);
+  });
+
+  testWidgets('skips unsupported codes in the allowlist', (tester) async {
+    await tester.pumpWidget(
+      _buildPicker(allowedCountryCodes: const ['JO', 'XX']),
+    );
+
+    await _openSheet(tester);
+
+    expect(_listItemCount(tester), 1);
+    expect(_inList(find.text('+962')), findsOneWidget);
+  });
+
+  testWidgets('shows every country when the allowlist has no matches', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      _buildPicker(allowedCountryCodes: const ['XX']),
+    );
+
+    await _openSheet(tester);
+
+    expect(_listItemCount(tester), countriesForIsoCodes(null).length);
+  });
+
+  testWidgets('shows every country when the allowlist is empty', (tester) async {
+    await tester.pumpWidget(_buildPicker(allowedCountryCodes: const []));
+
+    await _openSheet(tester);
+
+    expect(_listItemCount(tester), countriesForIsoCodes(null).length);
+  });
+}
+
+int _listItemCount(WidgetTester tester) {
+  return tester.widget<ListView>(find.byType(ListView)).semanticChildCount!;
 }

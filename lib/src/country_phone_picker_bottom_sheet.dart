@@ -13,12 +13,16 @@ class CountryPhonePickerBottomSheet extends StatefulWidget {
   final CountryModel selectedCountryCode;
   final String bottomSheetTitle;
   final BottomSheetConfig config;
+  final bool showSearch;
+  final List<String>? allowedCountryCodes;
 
   const CountryPhonePickerBottomSheet({
     super.key,
     required this.selectedCountryCode,
     required this.bottomSheetTitle,
     this.config = const BottomSheetConfig(),
+    this.showSearch = true,
+    this.allowedCountryCodes,
   });
 
   @override
@@ -39,12 +43,15 @@ class _CountryPhonePickerBottomSheetState
   String _query = '';
   bool _expanded = false;
 
+  bool get _searchEnabled =>
+      widget.showSearch && widget.config.searchConfig.enabled;
+
   @override
   void initState() {
     super.initState();
-    countriesList = allCountries;
+    countriesList = countriesForIsoCodes(widget.allowedCountryCodes);
     _visibleCountries = countriesList;
-    _expanded = widget.config.searchConfig.autofocus;
+    _expanded = _searchEnabled && widget.config.searchConfig.autofocus;
     _searchFocusNode.addListener(_handleSearchFocusChange);
     if (widget.config.scrollToSelected) {
       WidgetsBinding.instance.addPostFrameCallback(
@@ -119,7 +126,7 @@ class _CountryPhonePickerBottomSheetState
   /// is focused without a tap, such as by autofocus, and shrinks back once the
   /// keyboard is gone.
   void _handleSearchFocusChange() {
-    if (!widget.config.expandOnSearchTap) {
+    if (!_searchEnabled || !widget.config.expandOnSearchTap) {
       return;
     }
     final hasFocus = _searchFocusNode.hasFocus;
@@ -166,7 +173,7 @@ class _CountryPhonePickerBottomSheetState
           ],
         ),
         SizedBox(height: config.headerBottomSpacing),
-        if (searchConfig.enabled) ...[
+        if (_searchEnabled) ...[
           Padding(
             padding: searchConfig.padding,
             child: _searchField(searchConfig),
@@ -212,7 +219,7 @@ class _CountryPhonePickerBottomSheetState
     return _KeyboardAwareSheetSize(
       config: config,
       expanded: _expanded,
-      offsetForKeyboard: searchConfig.enabled,
+      offsetForKeyboard: _searchEnabled,
       onKeyboardDismissed: _handleKeyboardDismissed,
       child: content,
     );
@@ -325,7 +332,7 @@ class _CountryPhonePickerBottomSheetState
     CountryPickerLocalizations? localizations,
   ) {
     final searchConfig = widget.config.searchConfig;
-    if (!searchConfig.enabled || _query.trim().isEmpty) {
+    if (!_searchEnabled || _query.trim().isEmpty) {
       return countriesList;
     }
 

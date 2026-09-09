@@ -36,7 +36,7 @@ class PhoneInputExample extends StatefulWidget {
 }
 
 class _PhoneInputExampleState extends State<PhoneInputExample> {
-  static const String _initialCountryCode = 'IQ';
+  static const String _initialCountryCode = 'JO';
 
   CountryModel selectedCountry =
       findCountryByIsoCode(_initialCountryCode) ?? CountryModel.initialModel();
@@ -71,6 +71,8 @@ class _PhoneInputExampleState extends State<PhoneInputExample> {
               children: [
                 CountryPhonePicker(
                   bottomSheetTitle: 'Choose Country',
+                  showSearch: false,
+                  allowedCountryCodes: ['JO', 'QA'],
                   bottomSheetConfig: BottomSheetConfig(
                     closeIcon: const Icon(Icons.arrow_back_rounded),
                     titleStyle: const TextStyle(

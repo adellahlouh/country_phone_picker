@@ -10,6 +10,8 @@ A Flutter package for selecting countries with phone codes. It provides a bottom
 - Localized country names (69 languages)
 - Phone length and valid starting digits per country
 - Set the initial country with an ISO code (`initialCountryCode: 'US'`)
+- Hide the search field (`showSearch: false`)
+- Limit the list to an ISO allowlist (`allowedCountryCodes: ['JO', 'SA']`)
 - Simple `CountryPhonePicker` widget for quick integration
 - Performance: country data is parsed once, search runs only when the query changes, and keyboard animation does not rebuild the list
 
@@ -19,7 +21,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  country_phone_picker: ^0.1.0
+  country_phone_picker: ^0.1.1
   flutter_localizations:
     sdk: flutter
 ```
@@ -207,6 +209,8 @@ flutter run
 | `bottomSheetTitle` | `String` | Yes | Title shown at the top of the bottom sheet |
 | `bottomSheetConfig` | `BottomSheetConfig` | No | Bottom sheet appearance; defaults to the standard package design |
 | `initialCountryCode` | `String?` | No | ISO 3166-1 alpha-2 code (e.g. `"US"`) shown before the user picks one. Case-insensitive. `null`, empty, and unknown codes default to Jordan |
+| `showSearch` | `bool` | No | Whether the search field is shown. Defaults to `true`. The field is hidden when this is `false` or when `SearchConfig.enabled` is `false` |
+| `allowedCountryCodes` | `List<String>?` | No | ISO codes to keep in the list (e.g. `['JO', 'SA']`). Case-insensitive. `null` or empty shows every country. Unknown codes are skipped. If none match, the full list is shown |
 | `key` | `Key?` | No | Widget key |
 
 ### `BottomSheetConfig`
@@ -299,12 +303,37 @@ CountryPhonePicker(
 To hide the field, or to filter with your own rules:
 
 ```dart
+CountryPhonePicker(
+  showSearch: false,
+  ...
+);
+
 const SearchConfig(enabled: false);
 
 SearchConfig(
   matcher: (CountryModel country, String query) =>
       country.dialCode.contains(query),
 );
+```
+
+To show only some countries:
+
+```dart
+CountryPhonePicker(
+  allowedCountryCodes: ['JO', 'SA'],
+  bottomSheetTitle: 'Choose Country',
+  onChanged: (CountryModel country) {},
+);
+```
+
+Unknown codes in that list are skipped. If the list is `null`, empty, or contains no supported countries, every country is shown.
+
+### `countriesForIsoCodes`
+
+Resolves the same allowlist used by the picker. Returns the full country list when the input is `null`, empty, or has no supported codes.
+
+```dart
+final gulf = countriesForIsoCodes(['SA', 'AE', 'XX']);
 ```
 
 ### `CountryModel`
@@ -364,6 +393,8 @@ Public bottom sheet widget if you want to present the list yourself.
 | `selectedCountryCode` | `CountryModel` | Yes | Currently selected country |
 | `bottomSheetTitle` | `String` | Yes | Sheet title |
 | `config` | `BottomSheetConfig` | No | Bottom sheet appearance |
+| `showSearch` | `bool` | No | Whether the search field is shown. Defaults to `true` |
+| `allowedCountryCodes` | `List<String>?` | No | ISO allowlist used for the sheet list |
 
 ## Localization
 

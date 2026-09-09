@@ -1,3 +1,8 @@
+## 0.1.1
+
+* Add `showSearch` to hide or show the search field on `CountryPhonePicker`. The field is shown only when this flag is `true` and `SearchConfig.enabled` is `true`.
+* Add `allowedCountryCodes` to limit the list to ISO codes such as `['JO', 'SA']`. Unknown codes are skipped. `null`, empty, and lists with no supported codes show every country.
+
 ## 0.1.0
 
 * **Breaking:** `initialCountry` (`CountryModel?`) is now `initialCountryCode` (`String?`, ISO 3166-1 alpha-2, case-insensitive). The picker fills dial code, flag, hint, and the rest from the country list. `null`, empty, and unknown codes fall back to Jordan.

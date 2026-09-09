@@ -17,6 +17,31 @@ CountryModel? findCountryByIsoCode(String isoCode) {
   return _countriesByIso![isoCode.toUpperCase()];
 }
 
+/// Countries matching [isoCodes], in caller order.
+///
+/// `null` or empty [isoCodes] returns [allCountries]. Unknown codes are skipped.
+/// If no codes match, returns [allCountries].
+List<CountryModel> countriesForIsoCodes(List<String>? isoCodes) {
+  if (isoCodes == null || isoCodes.isEmpty) {
+    return allCountries;
+  }
+
+  final seen = <String>{};
+  final filtered = <CountryModel>[];
+  for (final code in isoCodes) {
+    if (code.isEmpty) {
+      continue;
+    }
+    final country = findCountryByIsoCode(code);
+    if (country != null && seen.add(country.isoCode)) {
+      filtered.add(country);
+    }
+  }
+  return filtered.isEmpty
+      ? allCountries
+      : List<CountryModel>.unmodifiable(filtered);
+}
+
 const List<Map<String, dynamic>> codes = [
   {
     "code": 85,
