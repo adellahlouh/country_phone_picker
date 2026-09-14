@@ -437,6 +437,49 @@ void main() {
     );
   });
 
+  testWidgets('sizes the sheet to a list shorter than the height factor', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      _buildPicker(
+        config: const BottomSheetConfig(initialHeightFactor: 0.5),
+        allowedCountryCodes: const ['JO', 'SA'],
+      ),
+    );
+
+    await _openSheet(tester);
+
+    final screenHeight = tester.getSize(find.byType(MaterialApp)).height;
+    final sheet = tester.getRect(find.byType(CountryPhonePickerBottomSheet));
+    final lastRowBottom = tester.getRect(_inList(find.text('+966'))).bottom;
+
+    expect(sheet.height, lessThan(screenHeight * 0.5));
+    // Only the configured spacing is left below the last country.
+    expect(sheet.bottom - lastRowBottom, lessThan(40));
+  });
+
+  testWidgets('keeps the height factor when sizeToContent is off', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      _buildPicker(
+        config: const BottomSheetConfig(
+          initialHeightFactor: 0.5,
+          sizeToContent: false,
+        ),
+        allowedCountryCodes: const ['JO', 'SA'],
+      ),
+    );
+
+    await _openSheet(tester);
+
+    final screenHeight = tester.getSize(find.byType(MaterialApp)).height;
+    expect(
+      tester.getSize(find.byType(CountryPhonePickerBottomSheet)).height,
+      closeTo(screenHeight * 0.5, 0.5),
+    );
+  });
+
   testWidgets('opens scrolled to the selected country', (tester) async {
     await tester.pumpWidget(
       MaterialApp(

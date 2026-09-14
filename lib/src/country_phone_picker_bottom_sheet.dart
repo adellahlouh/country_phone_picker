@@ -180,11 +180,15 @@ class _CountryPhonePickerBottomSheetState
           ),
           SizedBox(height: searchConfig.bottomSpacing),
         ],
-        Expanded(
+        _listArea(
+          config: config,
           child: _visibleCountries.isEmpty
               ? _emptyResultWidget(searchConfig)
               : ListView.separated(
                   controller: _scrollController,
+                  // The sheet bounds the list, so shrink wrapping still builds
+                  // rows lazily while letting a short list size the sheet.
+                  shrinkWrap: config.sizeToContent,
                   itemCount: _visibleCountries.length,
                   padding: config.listPadding,
                   itemBuilder: (_, index) {
@@ -223,6 +227,14 @@ class _CountryPhonePickerBottomSheetState
       onKeyboardDismissed: _handleKeyboardDismissed,
       child: content,
     );
+  }
+
+  /// The list fills the space left by the header when the sheet has a fixed
+  /// height, and only takes what it needs when the sheet follows its content.
+  Widget _listArea({required BottomSheetConfig config, required Widget child}) {
+    return config.sizeToContent
+        ? Flexible(child: child)
+        : Expanded(child: child);
   }
 
   /// Grows the sheet first and only then asks for the keyboard, so the list is
@@ -439,13 +451,29 @@ class _KeyboardAwareSheetSizeState extends State<_KeyboardAwareSheetSize> {
         // keeps its size, then clamped so the sheet never exceeds the screen.
         final height = math.min(available * factor + keyboardInset, available);
 
-        return AnimatedContainer(
+        final sized = Padding(
+          padding: EdgeInsets.only(bottom: keyboardInset),
+          child: widget.child,
+        );
+
+        if (!widget.config.sizeToContent) {
+          return AnimatedContainer(
+            duration: widget.config.expandDuration,
+            curve: widget.config.expandCurve,
+            height: height,
+            child: sized,
+          );
+        }
+
+        // The height is a ceiling here, so a list shorter than it decides the
+        // size of the sheet and no empty space is left below the last row.
+        return AnimatedSize(
           duration: widget.config.expandDuration,
           curve: widget.config.expandCurve,
-          height: height,
-          child: Padding(
-            padding: EdgeInsets.only(bottom: keyboardInset),
-            child: widget.child,
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: BoxConstraints(maxHeight: height),
+            child: sized,
           ),
         );
       },

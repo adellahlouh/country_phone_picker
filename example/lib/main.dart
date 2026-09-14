@@ -74,6 +74,7 @@ class _PhoneInputExampleState extends State<PhoneInputExample> {
                   showSearch: false,
                   allowedCountryCodes: ['JO', 'QA'],
                   bottomSheetConfig: BottomSheetConfig(
+                    sizeToContent: true,
                     closeIcon: const Icon(Icons.arrow_back_rounded),
                     titleStyle: const TextStyle(
                       fontSize: 18,
@@ -82,6 +83,7 @@ class _PhoneInputExampleState extends State<PhoneInputExample> {
                     radioActiveColor: Colors.deepPurple,
                     initialHeightFactor: 0.6,
                     expandedHeightFactor: 0.95,
+                    bottomSpacing: 32,
                     searchConfig: SearchConfig(
                       hintText: 'Search country or code',
                       filled: true,

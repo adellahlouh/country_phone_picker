@@ -1,3 +1,8 @@
+## 0.1.3
+
+* The bottom sheet is now only as tall as the countries it renders, so a short list such as `allowedCountryCodes: ['JO', 'SA']` no longer leaves empty space below the last row. `initialHeightFactor` and `expandedHeightFactor` became the maximum height instead of a fixed one.
+* Add `sizeToContent` on `BottomSheetConfig` to turn that off and keep the full height fraction.
+
 ## 0.1.2
 
 * Add `flagWidth`, `flagHeight`, `flagShape`, and `dialCodeStyle` on `CountryPhonePicker` so the collapsed picker can style the selected flag and dial code independently of `BottomSheetConfig`.

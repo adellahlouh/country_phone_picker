@@ -222,19 +222,25 @@ defaults, so you only need to provide the values you want to change.
 The `closeIcon` accepts any widget. Assets are resolved from the host
 application, while the package keeps ownership of the dismiss action.
 
-The sheet opens at `initialHeightFactor` of the available height instead of
-taking the whole screen. Tapping the search field grows it to
-`expandedHeightFactor` first, and the keyboard is only requested once that
-animation completes, so the field never slides under the keyboard. Closing the
-keyboard shrinks the sheet back to `initialHeightFactor`.
+The sheet takes the height its content needs, up to `initialHeightFactor` of the
+available height, instead of taking the whole screen. A short list, such as the
+two countries of `allowedCountryCodes: ['JO', 'SA']`, makes the sheet as tall as
+those rows, and a long list stops at the factor. Tapping the search field raises
+that ceiling to `expandedHeightFactor` first, and the keyboard is only requested
+once the animation completes, so the field never slides under the keyboard.
+Closing the keyboard shrinks the sheet back.
+
+Set `sizeToContent: false` to always use the full height fraction, even when the
+list is shorter than it.
 
 When the sheet opens, the list scrolls to the country that is currently selected
 and centers it, so the previous choice is visible without scrolling.
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
-| `initialHeightFactor` | `double` | `0.6` | Height fraction used when the sheet opens |
-| `expandedHeightFactor` | `double` | `0.95` | Height fraction used after the search field is tapped |
+| `initialHeightFactor` | `double` | `0.6` | Maximum height fraction used when the sheet opens |
+| `expandedHeightFactor` | `double` | `0.95` | Maximum height fraction used after the search field is tapped |
+| `sizeToContent` | `bool` | `true` | Shrink the sheet to the list height when it is shorter than the fraction |
 | `expandOnSearchTap` | `bool` | `true` | Grow the sheet before showing the keyboard |
 | `expandDuration` | `Duration` | `250ms` | Duration of the growth animation |
 | `expandCurve` | `Curve` | `Curves.easeOutCubic` | Curve of the growth animation |

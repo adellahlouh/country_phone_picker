@@ -23,6 +23,7 @@ class BottomSheetConfig {
     this.clipBehavior = Clip.none,
     this.initialHeightFactor = 0.6,
     this.expandedHeightFactor = 0.95,
+    this.sizeToContent = true,
     this.expandOnSearchTap = true,
     this.expandDuration = const Duration(milliseconds: 250),
     this.expandCurve = Curves.easeOutCubic,
@@ -82,11 +83,25 @@ class BottomSheetConfig {
   final Clip clipBehavior;
 
   /// Fraction of the available height the sheet occupies when it opens.
+  ///
+  /// With [sizeToContent] this is the maximum height instead of a fixed one.
   final double initialHeightFactor;
 
   /// Fraction of the available height the sheet grows to once the search field
   /// is tapped.
+  ///
+  /// With [sizeToContent] this is the maximum height instead of a fixed one.
   final double expandedHeightFactor;
+
+  /// Whether the sheet only takes the height its content needs.
+  ///
+  /// When `true` a short list, for example two countries in
+  /// `allowedCountryCodes`, makes the sheet as tall as those rows instead of
+  /// leaving empty space below them. Longer lists still stop at
+  /// [initialHeightFactor], or [expandedHeightFactor] while searching.
+  ///
+  /// Set it to `false` to always use the full height fraction.
+  final bool sizeToContent;
 
   /// Whether tapping the search field grows the sheet before the keyboard is
   /// shown.
