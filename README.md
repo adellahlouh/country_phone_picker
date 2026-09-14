@@ -21,7 +21,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  country_phone_picker: ^0.1.1
+  country_phone_picker: ^0.1.2
   flutter_localizations:
     sdk: flutter
 ```

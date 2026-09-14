@@ -27,6 +27,18 @@ class CountryPhonePicker extends StatefulWidget {
   /// of the codes match a supported country, the full list is shown.
   final List<String>? allowedCountryCodes;
 
+  /// Shape of the selected-country flag on the collapsed picker.
+  final Shape flagShape;
+
+  /// Width of the selected-country flag on the collapsed picker.
+  final double flagWidth;
+
+  /// Height of the selected-country flag on the collapsed picker.
+  final double flagHeight;
+
+  /// Style of the selected-country dial code on the collapsed picker.
+  final TextStyle? dialCodeStyle;
+
   const CountryPhonePicker({
     super.key,
     required this.onChanged,
@@ -35,6 +47,10 @@ class CountryPhonePicker extends StatefulWidget {
     this.initialCountryCode,
     this.showSearch = true,
     this.allowedCountryCodes,
+    this.flagShape = const RoundedRectangle(4),
+    this.flagWidth = 28,
+    this.flagHeight = 24,
+    this.dialCodeStyle,
   });
 
   @override
@@ -113,13 +129,17 @@ class _CountryPhonePickerState extends State<CountryPhonePicker> {
           CountryFlag.fromCountryCode(
             selectedCountryModel.isoCode,
             theme: ImageTheme(
-              shape: const RoundedRectangle(4),
-              width: 28,
-              height: 24,
+              shape: widget.flagShape,
+              width: widget.flagWidth,
+              height: widget.flagHeight,
             ),
           ),
           const SizedBox(width: 4.0),
-          Text(selectedCountryModel.dialCode, textDirection: TextDirection.ltr),
+          Text(
+            selectedCountryModel.dialCode,
+            style: widget.dialCodeStyle,
+            textDirection: TextDirection.ltr,
+          ),
         ],
       ),
     );

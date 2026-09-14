@@ -1,3 +1,4 @@
+import 'package:country_flags/country_flags.dart';
 import 'package:country_phone_picker/country_phone_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -168,6 +169,39 @@ void main() {
     );
 
     expect(find.text('+964'), findsOneWidget);
+  });
+
+  testWidgets('applies flag size and dial code style on the collapsed picker', (
+    tester,
+  ) async {
+    const dialCodeStyle = TextStyle(
+      color: Colors.deepPurple,
+      fontSize: 18,
+      fontWeight: FontWeight.w600,
+    );
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: CountryPhonePicker(
+            bottomSheetTitle: 'Choose Country',
+            initialCountryCode: 'JO',
+            flagWidth: 40,
+            flagHeight: 30,
+            dialCodeStyle: dialCodeStyle,
+            onChanged: (_) {},
+          ),
+        ),
+      ),
+    );
+
+    expect(tester.widget<Text>(find.text('+962')).style, dialCodeStyle);
+
+    final flag = tester.widget<CountryFlag>(find.byType(CountryFlag));
+    expect(flag.theme, isA<ImageTheme>());
+    final theme = flag.theme as ImageTheme;
+    expect(theme.width, 40);
+    expect(theme.height, 30);
   });
 
   test('findCountryByIsoCode is case-insensitive', () {

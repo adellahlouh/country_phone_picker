@@ -1,3 +1,7 @@
+## 0.1.2
+
+* Add `flagWidth`, `flagHeight`, `flagShape`, and `dialCodeStyle` on `CountryPhonePicker` so the collapsed picker can style the selected flag and dial code independently of `BottomSheetConfig`.
+
 ## 0.1.1
 
 * Add `showSearch` to hide or show the search field on `CountryPhonePicker`. The field is shown only when this flag is `true` and `SearchConfig.enabled` is `true`.
