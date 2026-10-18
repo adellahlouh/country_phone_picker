@@ -60,7 +60,7 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+964",
     "hintText": "7X-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": ["71", "73", "74"],
+    "phoneStartsWith": ["75", "76", "77", "78", "79"],
     "icon": "🇮🇶"
   },
   {
@@ -70,7 +70,7 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+20",
     "hintText": "1X-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": ["10", "11", "12"],
+    "phoneStartsWith": ["10", "11", "12", "15"],
     "icon": "🇪🇬"
   },
   {
@@ -90,7 +90,7 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+968",
     "hintText": "9X-XXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": ["90", "91", "92"],
+    "phoneStartsWith": ["7", "9"],
     "icon": "🇴🇲"
   },
   {
@@ -100,7 +100,7 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+974",
     "hintText": "3X-XXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": ["33", "34", "35"],
+    "phoneStartsWith": ["3", "5", "6", "7"],
     "icon": "🇶🇦"
   },
   {

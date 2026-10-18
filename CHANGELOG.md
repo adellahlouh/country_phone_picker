@@ -1,3 +1,7 @@
+## 0.1.4
+
+* Update `phoneStartsWith` prefixes for Iraq (`75`, `76`, `77`, `78`, `79`), Egypt (`10`, `11`, `12`, `15`), Oman (`7`, `9`), and Qatar (`3`, `5`, `6`, `7`) so phone validation matches current mobile numbering.
+
 ## 0.1.3
 
 * The bottom sheet is now only as tall as the countries it renders, so a short list such as `allowedCountryCodes: ['JO', 'SA']` no longer leaves empty space below the last row. `initialHeightFactor` and `expandedHeightFactor` became the maximum height instead of a fixed one.
