@@ -8,6 +8,7 @@ Widget _buildPicker({
   ValueChanged<CountryModel>? onChanged,
   bool showSearch = true,
   List<String>? allowedCountryCodes,
+  List<String>? pinnedCountryCodes,
 }) {
   return MaterialApp(
     home: Scaffold(
@@ -16,6 +17,7 @@ Widget _buildPicker({
         bottomSheetConfig: config,
         showSearch: showSearch,
         allowedCountryCodes: allowedCountryCodes,
+        pinnedCountryCodes: pinnedCountryCodes,
         onChanged: onChanged ?? (_) {},
       ),
     ),
@@ -487,6 +489,7 @@ void main() {
           body: CountryPhonePicker(
             bottomSheetTitle: 'Choose Country',
             initialCountryCode: 'US',
+            showSearch: false,
             onChanged: (_) {},
           ),
         ),
@@ -502,6 +505,34 @@ void main() {
     final rowCenter = tester.getRect(selectedRow).center.dy;
     expect(rowCenter, closeTo(listRect.center.dy, 4));
   });
+
+  testWidgets(
+    'leaves two rows of headroom above the selected country when the search field is shown',
+    (tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: CountryPhonePicker(
+              bottomSheetTitle: 'Choose Country',
+              initialCountryCode: 'US',
+              onChanged: (_) {},
+            ),
+          ),
+        ),
+      );
+
+      await _openSheet(tester);
+
+      final selectedRow = _inList(find.text('United States'));
+      expect(selectedRow, findsOneWidget);
+
+      final listRect = tester.getRect(find.byType(ListView));
+      final rowCenter = tester.getRect(selectedRow).center.dy;
+      // The row is pushed BELOW the configured alignment (default 0.5) so the
+      // search field above it does not visually crowd it.
+      expect(rowCenter, greaterThan(listRect.center.dy + 8));
+    },
+  );
 
   testWidgets('stays at the top when scrolling to the selection is off', (
     tester,
@@ -593,8 +624,126 @@ void main() {
 
     expect(_listItemCount(tester), countriesForIsoCodes(null).length);
   });
+
+  test('countriesWithPinnedFirst pins codes to the top in caller order', () {
+    final all = countriesForIsoCodes(null);
+    final reordered = countriesWithPinnedFirst(all, const ['US', 'GB', 'FR']);
+
+    expect(reordered.length, all.length);
+    expect(
+      reordered.take(3).map((country) => country.isoCode).toList(),
+      ['US', 'GB', 'FR'],
+    );
+    // Pinned codes are not duplicated: each appears once at the top.
+    expect(
+      reordered.where((country) => country.isoCode == 'US').length,
+      1,
+    );
+    expect(
+      reordered.where((country) => country.isoCode == 'FR').length,
+      1,
+    );
+  });
+
+  test('countriesWithPinnedFirst skips unknown and duplicate codes', () {
+    final all = countriesForIsoCodes(null);
+    final reordered =
+        countriesWithPinnedFirst(all, const ['sa', 'XX', 'SA', 'JO']);
+
+    expect(
+      reordered.take(2).map((country) => country.isoCode).toList(),
+      ['SA', 'JO'],
+    );
+  });
+
+  test('countriesWithPinnedFirst leaves order unchanged when codes are null or empty',
+      () {
+    final all = countriesForIsoCodes(null);
+    expect(countriesWithPinnedFirst(all, null), all);
+    expect(countriesWithPinnedFirst(all, const []), all);
+    expect(countriesWithPinnedFirst(all, const ['XX']), all);
+  });
+
+  test('countriesWithPinnedFirst drops codes not present in the base list', () {
+    final allowed = countriesForIsoCodes(const ['US', 'GB', 'FR', 'DE', 'JO']);
+    final reordered =
+        countriesWithPinnedFirst(allowed, const ['FR', 'ZZ', 'JO']);
+
+    expect(
+      reordered.map((country) => country.isoCode).toList(),
+      ['FR', 'JO', 'US', 'GB', 'DE'],
+    );
+  });
+
+  testWidgets('pins country codes to the top of the list', (tester) async {
+    await tester.pumpWidget(
+      _buildPicker(
+        config: const BottomSheetConfig(scrollToSelected: false),
+        pinnedCountryCodes: const ['US', 'GB', 'FR'],
+      ),
+    );
+
+    await _openSheet(tester);
+
+    final listView = tester.widget<ListView>(find.byType(ListView));
+    expect(listView.semanticChildCount, countriesForIsoCodes(null).length);
+    final dialCodes = _dialCodeOrder(tester);
+    expect(dialCodes.take(3).toList(), ['+1', '+44', '+33']);
+  });
+
+  testWidgets('pins only codes also present in the allowlist', (tester) async {
+    tester.view.physicalSize = const Size(1080, 2400);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(
+      _buildPicker(
+        config: const BottomSheetConfig(scrollToSelected: false),
+        allowedCountryCodes: const ['US', 'GB', 'FR', 'DE', 'JO'],
+        pinnedCountryCodes: const ['FR', 'ZZ', 'JO'],
+      ),
+    );
+
+    await _openSheet(tester);
+
+    expect(_listItemCount(tester), 5);
+    expect(_dialCodeOrder(tester), ['+33', '+962', '+1', '+44', '+49']);
+  });
+
+  testWidgets('leaves order unchanged when pinnedCountryCodes is empty',
+      (tester) async {
+    await tester.pumpWidget(
+      _buildPicker(
+        config: const BottomSheetConfig(scrollToSelected: false),
+        pinnedCountryCodes: const [],
+      ),
+    );
+
+    await _openSheet(tester);
+
+    expect(_listItemCount(tester), countriesForIsoCodes(null).length);
+    // Jordan is the default first entry in the baked-in order.
+    expect(_dialCodeOrder(tester).first, '+962');
+  });
 }
 
 int _listItemCount(WidgetTester tester) {
   return tester.widget<ListView>(find.byType(ListView)).semanticChildCount!;
+}
+
+List<String> _dialCodeOrder(WidgetTester tester) {
+  final dialCodes = find.descendant(
+    of: find.byType(ListView),
+    matching: find.byWidgetPredicate(
+      (widget) =>
+          widget is Text &&
+          widget.data != null &&
+          widget.data!.startsWith('+'),
+    ),
+  );
+  return tester
+      .widgetList<Text>(dialCodes)
+      .map((text) => text.data!)
+      .toList();
 }

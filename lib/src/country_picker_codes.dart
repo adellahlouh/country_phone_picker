@@ -42,6 +42,42 @@ List<CountryModel> countriesForIsoCodes(List<String>? isoCodes) {
       : List<CountryModel>.unmodifiable(filtered);
 }
 
+/// [base] reordered so [pinnedCodes] appear first in caller order, with the
+/// remaining countries following in their original [base] order.
+///
+/// `null` or empty [pinnedCodes] returns [base] unchanged. Codes not present in
+/// [base] (unknown or filtered out) are skipped. Duplicates are collapsed to
+/// their first occurrence; no country appears twice.
+List<CountryModel> countriesWithPinnedFirst(
+  List<CountryModel> base,
+  List<String>? pinnedCodes,
+) {
+  if (pinnedCodes == null || pinnedCodes.isEmpty) {
+    return base;
+  }
+
+  final baseByIso = <String, CountryModel>{
+    for (final country in base) country.isoCode: country,
+  };
+  final seen = <String>{};
+  final pinned = <CountryModel>[];
+  for (final code in pinnedCodes) {
+    if (code.isEmpty) {
+      continue;
+    }
+    final country = baseByIso[code.toUpperCase()];
+    if (country != null && seen.add(country.isoCode)) {
+      pinned.add(country);
+    }
+  }
+  if (pinned.isEmpty) {
+    return base;
+  }
+
+  final rest = base.where((country) => !seen.contains(country.isoCode));
+  return List<CountryModel>.unmodifiable([...pinned, ...rest]);
+}
+
 const List<Map<String, dynamic>> codes = [
   {
     "code": 85,

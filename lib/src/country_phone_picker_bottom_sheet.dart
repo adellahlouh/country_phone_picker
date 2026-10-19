@@ -15,6 +15,7 @@ class CountryPhonePickerBottomSheet extends StatefulWidget {
   final BottomSheetConfig config;
   final bool showSearch;
   final List<String>? allowedCountryCodes;
+  final List<String>? pinnedCountryCodes;
 
   const CountryPhonePickerBottomSheet({
     super.key,
@@ -23,6 +24,7 @@ class CountryPhonePickerBottomSheet extends StatefulWidget {
     this.config = const BottomSheetConfig(),
     this.showSearch = true,
     this.allowedCountryCodes,
+    this.pinnedCountryCodes,
   });
 
   @override
@@ -49,7 +51,10 @@ class _CountryPhonePickerBottomSheetState
   @override
   void initState() {
     super.initState();
-    countriesList = countriesForIsoCodes(widget.allowedCountryCodes);
+    countriesList = countriesWithPinnedFirst(
+      countriesForIsoCodes(widget.allowedCountryCodes),
+      widget.pinnedCountryCodes,
+    );
     _visibleCountries = countriesList;
     _expanded = _searchEnabled && widget.config.searchConfig.autofocus;
     _searchFocusNode.addListener(_handleSearchFocusChange);
@@ -92,9 +97,15 @@ class _CountryPhonePickerBottomSheetState
 
     final alignment = widget.config.scrollToSelectedAlignment;
     final position = _scrollController.position;
+    // The search field sits directly above the list, so lifting the selected
+    // row by two more countries keeps it from looking glued to the search bar.
+    final headroom = _searchEnabled
+        ? 2 * (itemExtent + separatorExtent)
+        : 0.0;
     final target =
         index * (itemExtent + separatorExtent) -
-        (position.viewportDimension - itemExtent) * alignment;
+        (position.viewportDimension - itemExtent) * alignment -
+        headroom;
     _scrollController.jumpTo(
       target.clamp(position.minScrollExtent, position.maxScrollExtent),
     );
@@ -111,6 +122,15 @@ class _CountryPhonePickerBottomSheetState
         alignment: alignment,
         duration: Duration.zero,
       );
+      // `ensureVisible` snaps the row back to `alignment` exactly, so the
+      // headroom has to be re-applied once the row has settled.
+      if (headroom > 0 && _scrollController.hasClients) {
+        final settled = _scrollController.position;
+        _scrollController.jumpTo(
+          (_scrollController.offset - headroom)
+              .clamp(settled.minScrollExtent, settled.maxScrollExtent),
+        );
+      }
     });
   }
 

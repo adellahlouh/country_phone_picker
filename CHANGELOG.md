@@ -1,3 +1,9 @@
+## 0.1.5
+
+* Add `pinnedCountryCodes` on `CountryPhonePicker` to pin ISO codes to the top of the list in caller order (e.g. `['US', 'GB', 'FR']`). Remaining countries follow in their default order. `null`, empty, and unknown codes leave the default order. Works alongside `allowedCountryCodes`: codes filtered out by the allowed list are skipped.
+* Add `countriesWithPinnedFirst` so host apps can apply the same reordering to a custom list.
+* `scrollToSelected` now leaves two rows of headroom above the selected country when the search field is shown, so the row no longer sits flush against the search field. When search is hidden the row still lands at `scrollToSelectedAlignment` exactly as before.
+
 ## 0.1.4
 
 * Update `phoneStartsWith` prefixes for Iraq (`75`, `76`, `77`, `78`, `79`), Egypt (`10`, `11`, `12`, `15`), Oman (`7`, `9`), and Qatar (`3`, `5`, `6`, `7`) so phone validation matches current mobile numbering.

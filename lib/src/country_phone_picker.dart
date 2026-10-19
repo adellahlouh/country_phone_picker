@@ -27,6 +27,14 @@ class CountryPhonePicker extends StatefulWidget {
   /// of the codes match a supported country, the full list is shown.
   final List<String>? allowedCountryCodes;
 
+  /// ISO 3166-1 alpha-2 codes to pin to the top of the list in caller order
+  /// (e.g. `['US', 'GB', 'FR']`).
+  ///
+  /// `null` or empty leaves the default order. Unknown codes are skipped, as
+  /// are codes filtered out by [allowedCountryCodes]. Remaining countries
+  /// follow in their default order.
+  final List<String>? pinnedCountryCodes;
+
   /// Shape of the selected-country flag on the collapsed picker.
   final Shape flagShape;
 
@@ -47,6 +55,7 @@ class CountryPhonePicker extends StatefulWidget {
     this.initialCountryCode,
     this.showSearch = true,
     this.allowedCountryCodes,
+    this.pinnedCountryCodes,
     this.flagShape = const RoundedRectangle(4),
     this.flagWidth = 28,
     this.flagHeight = 24,
@@ -107,6 +116,7 @@ class _CountryPhonePickerState extends State<CountryPhonePicker> {
               config: widget.bottomSheetConfig,
               showSearch: widget.showSearch,
               allowedCountryCodes: widget.allowedCountryCodes,
+              pinnedCountryCodes: widget.pinnedCountryCodes,
             );
           },
         );

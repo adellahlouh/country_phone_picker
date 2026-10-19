@@ -12,6 +12,7 @@ A Flutter package for selecting countries with phone codes. It provides a bottom
 - Set the initial country with an ISO code (`initialCountryCode: 'US'`)
 - Hide the search field (`showSearch: false`)
 - Limit the list to an ISO allowlist (`allowedCountryCodes: ['JO', 'SA']`)
+- Pin ISO codes to the top of the list (`pinnedCountryCodes: ['US', 'GB', 'FR']`)
 - Simple `CountryPhonePicker` widget for quick integration
 - Performance: country data is parsed once, search runs only when the query changes, and keyboard animation does not rebuild the list
 
@@ -211,6 +212,7 @@ flutter run
 | `initialCountryCode` | `String?` | No | ISO 3166-1 alpha-2 code (e.g. `"US"`) shown before the user picks one. Case-insensitive. `null`, empty, and unknown codes default to Jordan |
 | `showSearch` | `bool` | No | Whether the search field is shown. Defaults to `true`. The field is hidden when this is `false` or when `SearchConfig.enabled` is `false` |
 | `allowedCountryCodes` | `List<String>?` | No | ISO codes to keep in the list (e.g. `['JO', 'SA']`). Case-insensitive. `null` or empty shows every country. Unknown codes are skipped. If none match, the full list is shown |
+| `pinnedCountryCodes` | `List<String>?` | No | ISO codes to pin to the top of the list in caller order (e.g. `['US', 'GB', 'FR']`). Case-insensitive. `null` or empty leaves the default order. Unknown codes are skipped, as are codes filtered out by `allowedCountryCodes`. Remaining countries follow in their default order |
 | `key` | `Key?` | No | Widget key |
 
 ### `BottomSheetConfig`
@@ -334,6 +336,18 @@ CountryPhonePicker(
 
 Unknown codes in that list are skipped. If the list is `null`, empty, or contains no supported countries, every country is shown.
 
+To pin a few countries to the top of the list in a chosen order while still showing the rest:
+
+```dart
+CountryPhonePicker(
+  pinnedCountryCodes: ['US', 'GB', 'FR'],
+  bottomSheetTitle: 'Choose Country',
+  onChanged: (CountryModel country) {},
+);
+```
+
+Pinned countries appear first in caller order, then every other country follows in its default position. Pinning works alongside `allowedCountryCodes`; codes not in the allowlist are silently skipped.
+
 ### `countriesForIsoCodes`
 
 Resolves the same allowlist used by the picker. Returns the full country list when the input is `null`, empty, or has no supported codes.
@@ -401,6 +415,7 @@ Public bottom sheet widget if you want to present the list yourself.
 | `config` | `BottomSheetConfig` | No | Bottom sheet appearance |
 | `showSearch` | `bool` | No | Whether the search field is shown. Defaults to `true` |
 | `allowedCountryCodes` | `List<String>?` | No | ISO allowlist used for the sheet list |
+| `pinnedCountryCodes` | `List<String>?` | No | ISO codes pinned to the top of the sheet list in caller order |
 
 ## Localization
 
