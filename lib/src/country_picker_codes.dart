@@ -87,7 +87,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "7X-XXXXXXX",
     "lengthNumber": 9,
     "phoneStartsWith": ["77", "78", "79"],
-    "icon": "🇯🇴"
+    "icon": "🇯🇴",
   },
   {
     "code": 79,
@@ -97,7 +97,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "7X-XXXXXXXX",
     "lengthNumber": 10,
     "phoneStartsWith": ["75", "76", "77", "78", "79"],
-    "icon": "🇮🇶"
+    "icon": "🇮🇶",
   },
   {
     "code": 51,
@@ -107,7 +107,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "1X-XXXXXXXX",
     "lengthNumber": 10,
     "phoneStartsWith": ["10", "11", "12", "15"],
-    "icon": "🇪🇬"
+    "icon": "🇪🇬",
   },
   {
     "code": 149,
@@ -117,7 +117,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "5X-XXXXXX",
     "lengthNumber": 9,
     "phoneStartsWith": ["5"],
-    "icon": "🇸🇦"
+    "icon": "🇸🇦",
   },
   {
     "code": 129,
@@ -127,7 +127,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "9X-XXXXX",
     "lengthNumber": 8,
     "phoneStartsWith": ["7", "9"],
-    "icon": "🇴🇲"
+    "icon": "🇴🇲",
   },
   {
     "code": 139,
@@ -137,7 +137,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "3X-XXXXX",
     "lengthNumber": 8,
     "phoneStartsWith": ["3", "5", "6", "7"],
-    "icon": "🇶🇦"
+    "icon": "🇶🇦",
   },
   {
     "code": 176,
@@ -147,7 +147,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "5X-XXXXXX",
     "lengthNumber": 8,
     "phoneStartsWith": ["5", "56", "59"],
-    "icon": "🇵🇸"
+    "icon": "🇵🇸",
   },
   {
     "code": 115,
@@ -157,7 +157,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "61-XXXXXX",
     "lengthNumber": 9,
     "phoneStartsWith": ["61", "62", "63"],
-    "icon": "🇲🇦"
+    "icon": "🇲🇦",
   },
   {
     "code": 89,
@@ -167,7 +167,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "50-XXXXXX",
     "lengthNumber": 8,
     "phoneStartsWith": ["50", "51", "55"],
-    "icon": "🇰🇼"
+    "icon": "🇰🇼",
   },
   {
     "code": 3,
@@ -177,7 +177,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "5-XXXXXXXX",
     "lengthNumber": 9,
     "phoneStartsWith": ["5", "6", "7"],
-    "icon": "🇩🇿"
+    "icon": "🇩🇿",
   },
   {
     "code": 13,
@@ -187,7 +187,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "32-XXXXXX",
     "lengthNumber": 8,
     "phoneStartsWith": ["32", "33", "34"],
-    "icon": "🇧🇭"
+    "icon": "🇧🇭",
   },
   {
     "code": 39,
@@ -197,7 +197,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "32-XXXXX",
     "lengthNumber": 7,
     "phoneStartsWith": ["32", "33", "34"],
-    "icon": "🇰🇲"
+    "icon": "🇰🇲",
   },
   {
     "code": 47,
@@ -207,7 +207,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "77-XXXXXX",
     "lengthNumber": 8,
     "phoneStartsWith": ["77", "78", "79"],
-    "icon": "🇩🇯"
+    "icon": "🇩🇯",
   },
   {
     "code": 93,
@@ -217,7 +217,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "70-XXXXXX",
     "lengthNumber": 8,
     "phoneStartsWith": ["70", "71", "76"],
-    "icon": "🇱🇧"
+    "icon": "🇱🇧",
   },
   {
     "code": 96,
@@ -227,7 +227,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "91-XXXXXXX",
     "lengthNumber": 9,
     "phoneStartsWith": ["91", "92", "94"],
-    "icon": "🇱🇾"
+    "icon": "🇱🇾",
   },
   {
     "code": 107,
@@ -237,7 +237,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "2-XXXXXX",
     "lengthNumber": 8,
     "phoneStartsWith": ["2", "3", "4"],
-    "icon": "🇲🇷"
+    "icon": "🇲🇷",
   },
   {
     "code": 158,
@@ -247,7 +247,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "61-XXXXXX",
     "lengthNumber": 8,
     "phoneStartsWith": ["61", "62", "63"],
-    "icon": "🇸🇴"
+    "icon": "🇸🇴",
   },
   {
     "code": 164,
@@ -257,7 +257,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "90-XXXXXX",
     "lengthNumber": 9,
     "phoneStartsWith": ["90", "91", "92"],
-    "icon": "🇸🇩"
+    "icon": "🇸🇩",
   },
   {
     "code": 161,
@@ -267,7 +267,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "92-XXXXXX",
     "lengthNumber": 9,
     "phoneStartsWith": ["92", "93", "94"],
-    "icon": "🇸🇸"
+    "icon": "🇸🇸",
   },
   {
     "code": 169,
@@ -277,7 +277,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "91-XXXXXX",
     "lengthNumber": 9,
     "phoneStartsWith": ["91", "93", "94"],
-    "icon": "🇸🇾"
+    "icon": "🇸🇾",
   },
   {
     "code": 177,
@@ -287,7 +287,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "20-XXXXXX",
     "lengthNumber": 8,
     "phoneStartsWith": ["20", "21", "22"],
-    "icon": "🇹🇳"
+    "icon": "🇹🇳",
   },
   {
     "code": 183,
@@ -297,7 +297,7 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "50-XXXXXX",
     "lengthNumber": 9,
     "phoneStartsWith": ["50", "51", "52"],
-    "icon": "🇦🇪"
+    "icon": "🇦🇪",
   },
   {
     "code": 192,
@@ -307,9 +307,8 @@ const List<Map<String, dynamic>> codes = [
     "hintText": "70-XXXXXX",
     "lengthNumber": 9,
     "phoneStartsWith": ["70", "71", "73"],
-    "icon": "🇾🇪"
+    "icon": "🇾🇪",
   },
-
 
   {
     "code": 1,
@@ -318,12 +317,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+93",
     "hintText": "7-XXXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "7",
-      "8",
-      "9"
-    ],
-    "icon": "🇦🇫"
+    "phoneStartsWith": ["7", "8", "9"],
+    "icon": "🇦🇫",
   },
   {
     "code": 2,
@@ -332,12 +327,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+355",
     "hintText": "6-XXXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "8"
-    ],
-    "icon": "🇦🇱"
+    "phoneStartsWith": ["6", "7", "8"],
+    "icon": "🇦🇱",
   },
 
   {
@@ -347,12 +338,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+376",
     "hintText": "3-XXXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "3",
-      "4",
-      "6"
-    ],
-    "icon": "🇦🇩"
+    "phoneStartsWith": ["3", "4", "6"],
+    "icon": "🇦🇩",
   },
   {
     "code": 5,
@@ -361,12 +348,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+244",
     "hintText": "9-XXXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "9",
-      "92",
-      "93"
-    ],
-    "icon": "🇦🇴"
+    "phoneStartsWith": ["9", "92", "93"],
+    "icon": "🇦🇴",
   },
   {
     "code": 6,
@@ -375,12 +358,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+1-268",
     "hintText": "72-XXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "72",
-      "73",
-      "76"
-    ],
-    "icon": "🇦🇬"
+    "phoneStartsWith": ["72", "73", "76"],
+    "icon": "🇦🇬",
   },
   {
     "code": 7,
@@ -389,12 +368,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+54",
     "hintText": "11-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "11",
-      "221",
-      "341"
-    ],
-    "icon": "🇦🇷"
+    "phoneStartsWith": ["11", "221", "341"],
+    "icon": "🇦🇷",
   },
   {
     "code": 8,
@@ -403,12 +378,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+374",
     "hintText": "55-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "55",
-      "93",
-      "96"
-    ],
-    "icon": "🇦🇲"
+    "phoneStartsWith": ["55", "93", "96"],
+    "icon": "🇦🇲",
   },
   {
     "code": 9,
@@ -417,12 +388,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+61",
     "hintText": "4-XXXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "4",
-      "5",
-      "6"
-    ],
-    "icon": "🇦🇺"
+    "phoneStartsWith": ["4", "5", "6"],
+    "icon": "🇦🇺",
   },
   {
     "code": 10,
@@ -431,12 +398,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+43",
     "hintText": "650-XXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "650",
-      "660",
-      "664"
-    ],
-    "icon": "🇦🇹"
+    "phoneStartsWith": ["650", "660", "664"],
+    "icon": "🇦🇹",
   },
   {
     "code": 11,
@@ -445,12 +408,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+994",
     "hintText": "40-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "40",
-      "41",
-      "50"
-    ],
-    "icon": "🇦🇿"
+    "phoneStartsWith": ["40", "41", "50"],
+    "icon": "🇦🇿",
   },
   {
     "code": 12,
@@ -459,12 +418,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+1-242",
     "hintText": "242-XXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "242",
-      "2425",
-      "2426"
-    ],
-    "icon": "🇧🇸"
+    "phoneStartsWith": ["242", "2425", "2426"],
+    "icon": "🇧🇸",
   },
   {
     "code": 14,
@@ -473,12 +428,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+880",
     "hintText": "11-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "11",
-      "13",
-      "14"
-    ],
-    "icon": "🇧🇩"
+    "phoneStartsWith": ["11", "13", "14"],
+    "icon": "🇧🇩",
   },
   {
     "code": 15,
@@ -487,12 +438,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+1-246",
     "hintText": "251-XXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "251",
-      "252",
-      "253"
-    ],
-    "icon": "🇧🇧"
+    "phoneStartsWith": ["251", "252", "253"],
+    "icon": "🇧🇧",
   },
   {
     "code": 16,
@@ -501,12 +448,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+375",
     "hintText": "29-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "29",
-      "33",
-      "44"
-    ],
-    "icon": "🇧🇾"
+    "phoneStartsWith": ["29", "33", "44"],
+    "icon": "🇧🇾",
   },
   {
     "code": 17,
@@ -515,12 +458,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+32",
     "hintText": "460-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "460",
-      "461",
-      "466"
-    ],
-    "icon": "🇧🇪"
+    "phoneStartsWith": ["460", "461", "466"],
+    "icon": "🇧🇪",
   },
   {
     "code": 18,
@@ -529,12 +468,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+501",
     "hintText": "6-XXXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "8"
-    ],
-    "icon": "🇧🇿"
+    "phoneStartsWith": ["6", "7", "8"],
+    "icon": "🇧🇿",
   },
   {
     "code": 19,
@@ -543,12 +478,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+229",
     "hintText": "90-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "90",
-      "91",
-      "92"
-    ],
-    "icon": "🇧🇯"
+    "phoneStartsWith": ["90", "91", "92"],
+    "icon": "🇧🇯",
   },
   {
     "code": 20,
@@ -557,12 +488,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+975",
     "hintText": "17-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "17",
-      "18",
-      "19"
-    ],
-    "icon": "🇧🇹"
+    "phoneStartsWith": ["17", "18", "19"],
+    "icon": "🇧🇹",
   },
   {
     "code": 21,
@@ -571,12 +498,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+591",
     "hintText": "2-XXXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "2",
-      "3",
-      "4"
-    ],
-    "icon": "🇧🇴"
+    "phoneStartsWith": ["2", "3", "4"],
+    "icon": "🇧🇴",
   },
   {
     "code": 22,
@@ -585,12 +508,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+387",
     "hintText": "60-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "60",
-      "61",
-      "62"
-    ],
-    "icon": "🇧🇦"
+    "phoneStartsWith": ["60", "61", "62"],
+    "icon": "🇧🇦",
   },
   {
     "code": 23,
@@ -599,12 +518,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+267",
     "hintText": "71-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "71",
-      "72",
-      "73"
-    ],
-    "icon": "🇧🇼"
+    "phoneStartsWith": ["71", "72", "73"],
+    "icon": "🇧🇼",
   },
   {
     "code": 24,
@@ -613,12 +528,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+55",
     "hintText": "11-XXXXXXXXX",
     "lengthNumber": 11,
-    "phoneStartsWith": [
-      "11",
-      "12",
-      "13"
-    ],
-    "icon": "🇧🇷"
+    "phoneStartsWith": ["11", "12", "13"],
+    "icon": "🇧🇷",
   },
   {
     "code": 25,
@@ -627,12 +538,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+673",
     "hintText": "71-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "71",
-      "72",
-      "73"
-    ],
-    "icon": "🇧🇳"
+    "phoneStartsWith": ["71", "72", "73"],
+    "icon": "🇧🇳",
   },
   {
     "code": 26,
@@ -641,12 +548,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+359",
     "hintText": "87-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "87",
-      "88",
-      "89"
-    ],
-    "icon": "🇧🇬"
+    "phoneStartsWith": ["87", "88", "89"],
+    "icon": "🇧🇬",
   },
   {
     "code": 27,
@@ -655,12 +558,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+226",
     "hintText": "6-XXXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "8"
-    ],
-    "icon": "🇧🇫"
+    "phoneStartsWith": ["6", "7", "8"],
+    "icon": "🇧🇫",
   },
   {
     "code": 28,
@@ -669,12 +568,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+257",
     "hintText": "79-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "79",
-      "7",
-      "8"
-    ],
-    "icon": "🇧🇮"
+    "phoneStartsWith": ["79", "7", "8"],
+    "icon": "🇧🇮",
   },
   {
     "code": 29,
@@ -683,12 +578,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+238",
     "hintText": "5-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "5",
-      "9",
-      "9"
-    ],
-    "icon": "🇨🇻"
+    "phoneStartsWith": ["5", "9", "9"],
+    "icon": "🇨🇻",
   },
   {
     "code": 30,
@@ -697,12 +588,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+855",
     "hintText": "12-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "12",
-      "6",
-      "7"
-    ],
-    "icon": "🇰🇭"
+    "phoneStartsWith": ["12", "6", "7"],
+    "icon": "🇰🇭",
   },
   {
     "code": 31,
@@ -711,12 +598,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+237",
     "hintText": "2-XXXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "2",
-      "5",
-      "9"
-    ],
-    "icon": "🇨🇲"
+    "phoneStartsWith": ["2", "5", "9"],
+    "icon": "🇨🇲",
   },
   {
     "code": 32,
@@ -725,12 +608,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+1",
     "hintText": "416-XXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "416",
-      "647",
-      "905"
-    ],
-    "icon": "🇨🇦"
+    "phoneStartsWith": ["416", "647", "905"],
+    "icon": "🇨🇦",
   },
   {
     "code": 33,
@@ -739,12 +618,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+236",
     "hintText": "7-XXXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "7",
-      "8",
-      "9"
-    ],
-    "icon": "🇨🇫"
+    "phoneStartsWith": ["7", "8", "9"],
+    "icon": "🇨🇫",
   },
   {
     "code": 34,
@@ -753,12 +628,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+235",
     "hintText": "6-XXXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "9"
-    ],
-    "icon": "🇹🇩"
+    "phoneStartsWith": ["6", "7", "9"],
+    "icon": "🇹🇩",
   },
   {
     "code": 35,
@@ -767,12 +638,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+56",
     "hintText": "9-XXXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "9",
-      "91",
-      "92"
-    ],
-    "icon": "🇨🇱"
+    "phoneStartsWith": ["9", "91", "92"],
+    "icon": "🇨🇱",
   },
   {
     "code": 36,
@@ -781,12 +648,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+86",
     "hintText": "13-XXXXXXXXX",
     "lengthNumber": 11,
-    "phoneStartsWith": [
-      "13",
-      "14",
-      "15"
-    ],
-    "icon": "🇨🇳"
+    "phoneStartsWith": ["13", "14", "15"],
+    "icon": "🇨🇳",
   },
   {
     "code": 37,
@@ -795,12 +658,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+57",
     "hintText": "300-XXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "300",
-      "301",
-      "302"
-    ],
-    "icon": "🇨🇴"
+    "phoneStartsWith": ["300", "301", "302"],
+    "icon": "🇨🇴",
   },
 
   {
@@ -810,12 +669,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+242",
     "hintText": "05-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "05",
-      "06",
-      "07"
-    ],
-    "icon": "🇨🇬"
+    "phoneStartsWith": ["05", "06", "07"],
+    "icon": "🇨🇬",
   },
   {
     "code": 41,
@@ -824,12 +679,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+506",
     "hintText": "60-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "60",
-      "61",
-      "62"
-    ],
-    "icon": "🇨🇷"
+    "phoneStartsWith": ["60", "61", "62"],
+    "icon": "🇨🇷",
   },
   {
     "code": 42,
@@ -838,12 +689,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+385",
     "hintText": "91-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "91",
-      "92",
-      "95"
-    ],
-    "icon": "🇭🇷"
+    "phoneStartsWith": ["91", "92", "95"],
+    "icon": "🇭🇷",
   },
   {
     "code": 43,
@@ -852,12 +699,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+53",
     "hintText": "5-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "5",
-      "7",
-      "8"
-    ],
-    "icon": "🇨🇺"
+    "phoneStartsWith": ["5", "7", "8"],
+    "icon": "🇨🇺",
   },
   {
     "code": 44,
@@ -866,12 +709,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+357",
     "hintText": "95-XXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "95",
-      "96",
-      "97"
-    ],
-    "icon": "🇨🇾"
+    "phoneStartsWith": ["95", "96", "97"],
+    "icon": "🇨🇾",
   },
   {
     "code": 45,
@@ -880,12 +719,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+420",
     "hintText": "601-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "601",
-      "602",
-      "603"
-    ],
-    "icon": "🇨🇿"
+    "phoneStartsWith": ["601", "602", "603"],
+    "icon": "🇨🇿",
   },
   {
     "code": 46,
@@ -894,12 +729,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+45",
     "hintText": "20-XXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "20",
-      "21",
-      "22"
-    ],
-    "icon": "🇩🇰"
+    "phoneStartsWith": ["20", "21", "22"],
+    "icon": "🇩🇰",
   },
 
   {
@@ -909,12 +740,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+1-767",
     "hintText": "767-XXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "767",
-      "210",
-      "315"
-    ],
-    "icon": "🇩🇲"
+    "phoneStartsWith": ["767", "210", "315"],
+    "icon": "🇩🇲",
   },
   {
     "code": 49,
@@ -923,12 +750,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+1-809",
     "hintText": "809-XXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "809",
-      "829",
-      "849"
-    ],
-    "icon": "🇩🇴"
+    "phoneStartsWith": ["809", "829", "849"],
+    "icon": "🇩🇴",
   },
   {
     "code": 50,
@@ -937,12 +760,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+593",
     "hintText": "09-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "09",
-      "98",
-      "99"
-    ],
-    "icon": "🇪🇨"
+    "phoneStartsWith": ["09", "98", "99"],
+    "icon": "🇪🇨",
   },
 
   {
@@ -952,12 +771,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+503",
     "hintText": "6-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "8"
-    ],
-    "icon": "🇸🇻"
+    "phoneStartsWith": ["6", "7", "8"],
+    "icon": "🇸🇻",
   },
   {
     "code": 53,
@@ -966,12 +781,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+240",
     "hintText": "222-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "222",
-      "551",
-      "700"
-    ],
-    "icon": "🇬🇶"
+    "phoneStartsWith": ["222", "551", "700"],
+    "icon": "🇬🇶",
   },
   {
     "code": 54,
@@ -980,12 +791,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+291",
     "hintText": "1-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "1",
-      "2",
-      "4"
-    ],
-    "icon": "🇪🇷"
+    "phoneStartsWith": ["1", "2", "4"],
+    "icon": "🇪🇷",
   },
   {
     "code": 55,
@@ -994,12 +801,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+372",
     "hintText": "50-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "50",
-      "51",
-      "52"
-    ],
-    "icon": "🇪🇪"
+    "phoneStartsWith": ["50", "51", "52"],
+    "icon": "🇪🇪",
   },
   {
     "code": 56,
@@ -1008,12 +811,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+268",
     "hintText": "2-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "2",
-      "3",
-      "5"
-    ],
-    "icon": "🇸🇿"
+    "phoneStartsWith": ["2", "3", "5"],
+    "icon": "🇸🇿",
   },
   {
     "code": 57,
@@ -1022,12 +821,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+251",
     "hintText": "91-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "91",
-      "92",
-      "93"
-    ],
-    "icon": "🇪🇹"
+    "phoneStartsWith": ["91", "92", "93"],
+    "icon": "🇪🇹",
   },
   {
     "code": 58,
@@ -1036,12 +831,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+679",
     "hintText": "7-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "7",
-      "8",
-      "9"
-    ],
-    "icon": "🇫🇯"
+    "phoneStartsWith": ["7", "8", "9"],
+    "icon": "🇫🇯",
   },
   {
     "code": 59,
@@ -1050,12 +841,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+358",
     "hintText": "4-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "4",
-      "5",
-      "6"
-    ],
-    "icon": "🇫🇮"
+    "phoneStartsWith": ["4", "5", "6"],
+    "icon": "🇫🇮",
   },
   {
     "code": 60,
@@ -1064,12 +851,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+33",
     "hintText": "1-XXXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "1",
-      "6",
-      "7"
-    ],
-    "icon": "🇫🇷"
+    "phoneStartsWith": ["1", "6", "7"],
+    "icon": "🇫🇷",
   },
   {
     "code": 61,
@@ -1078,12 +861,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+241",
     "hintText": "04-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "04",
-      "05",
-      "06"
-    ],
-    "icon": "🇬🇦"
+    "phoneStartsWith": ["04", "05", "06"],
+    "icon": "🇬🇦",
   },
   {
     "code": 62,
@@ -1092,12 +871,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+220",
     "hintText": "7-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "7",
-      "9",
-      "4"
-    ],
-    "icon": "🇬🇲"
+    "phoneStartsWith": ["7", "9", "4"],
+    "icon": "🇬🇲",
   },
   {
     "code": 63,
@@ -1106,12 +881,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+995",
     "hintText": "5-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "5",
-      "7",
-      "9"
-    ],
-    "icon": "🇬🇪"
+    "phoneStartsWith": ["5", "7", "9"],
+    "icon": "🇬🇪",
   },
   {
     "code": 64,
@@ -1120,12 +891,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+49",
     "hintText": "15-XXXXXXXX",
     "lengthNumber": 11,
-    "phoneStartsWith": [
-      "15",
-      "16",
-      "17"
-    ],
-    "icon": "🇩🇪"
+    "phoneStartsWith": ["15", "16", "17"],
+    "icon": "🇩🇪",
   },
   {
     "code": 65,
@@ -1134,12 +901,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+233",
     "hintText": "20-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "20",
-      "24",
-      "50"
-    ],
-    "icon": "🇬🇭"
+    "phoneStartsWith": ["20", "24", "50"],
+    "icon": "🇬🇭",
   },
   {
     "code": 66,
@@ -1148,12 +911,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+30",
     "hintText": "6-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "69"
-    ],
-    "icon": "🇬🇷"
+    "phoneStartsWith": ["6", "7", "69"],
+    "icon": "🇬🇷",
   },
   {
     "code": 67,
@@ -1162,12 +921,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+1-473",
     "hintText": "473-XXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "473",
-      "400",
-      "534"
-    ],
-    "icon": "🇬🇩"
+    "phoneStartsWith": ["473", "400", "534"],
+    "icon": "🇬🇩",
   },
   {
     "code": 68,
@@ -1176,12 +931,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+502",
     "hintText": "4-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "4",
-      "5",
-      "6"
-    ],
-    "icon": "🇬🇹"
+    "phoneStartsWith": ["4", "5", "6"],
+    "icon": "🇬🇹",
   },
   {
     "code": 69,
@@ -1190,12 +941,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+224",
     "hintText": "6-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "8"
-    ],
-    "icon": "🇬🇳"
+    "phoneStartsWith": ["6", "7", "8"],
+    "icon": "🇬🇳",
   },
   {
     "code": 70,
@@ -1204,12 +951,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+245",
     "hintText": "5-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "5",
-      "6",
-      "7"
-    ],
-    "icon": "🇬🇼"
+    "phoneStartsWith": ["5", "6", "7"],
+    "icon": "🇬🇼",
   },
   {
     "code": 71,
@@ -1218,12 +961,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+592",
     "hintText": "600-XXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "600",
-      "601",
-      "602"
-    ],
-    "icon": "🇬🇾"
+    "phoneStartsWith": ["600", "601", "602"],
+    "icon": "🇬🇾",
   },
   {
     "code": 72,
@@ -1232,12 +971,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+509",
     "hintText": "30-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "30",
-      "31",
-      "32"
-    ],
-    "icon": "🇭🇹"
+    "phoneStartsWith": ["30", "31", "32"],
+    "icon": "🇭🇹",
   },
   {
     "code": 73,
@@ -1246,12 +981,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+504",
     "hintText": "3-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "3",
-      "7",
-      "8"
-    ],
-    "icon": "🇭🇳"
+    "phoneStartsWith": ["3", "7", "8"],
+    "icon": "🇭🇳",
   },
   {
     "code": 74,
@@ -1260,12 +991,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+36",
     "hintText": "20-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "20",
-      "30",
-      "31"
-    ],
-    "icon": "🇭🇺"
+    "phoneStartsWith": ["20", "30", "31"],
+    "icon": "🇭🇺",
   },
   {
     "code": 75,
@@ -1274,12 +1001,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+354",
     "hintText": "6-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "8"
-    ],
-    "icon": "🇮🇸"
+    "phoneStartsWith": ["6", "7", "8"],
+    "icon": "🇮🇸",
   },
   {
     "code": 76,
@@ -1288,12 +1011,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+91",
     "hintText": "70-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "70",
-      "80",
-      "90"
-    ],
-    "icon": "🇮🇳"
+    "phoneStartsWith": ["70", "80", "90"],
+    "icon": "🇮🇳",
   },
   {
     "code": 77,
@@ -1302,12 +1021,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+62",
     "hintText": "21-XXXXXXXXXX",
     "lengthNumber": 12,
-    "phoneStartsWith": [
-      "21",
-      "22",
-      "81"
-    ],
-    "icon": "🇮🇩"
+    "phoneStartsWith": ["21", "22", "81"],
+    "icon": "🇮🇩",
   },
   {
     "code": 78,
@@ -1316,12 +1031,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+98",
     "hintText": "91-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "91",
-      "92",
-      "93"
-    ],
-    "icon": "🇮🇷"
+    "phoneStartsWith": ["91", "92", "93"],
+    "icon": "🇮🇷",
   },
 
   {
@@ -1331,12 +1042,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+353",
     "hintText": "83-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "83",
-      "85",
-      "86"
-    ],
-    "icon": "🇮🇪"
+    "phoneStartsWith": ["83", "85", "86"],
+    "icon": "🇮🇪",
   },
   {
     "code": 82,
@@ -1345,12 +1052,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+39",
     "hintText": "31-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "31",
-      "32",
-      "33"
-    ],
-    "icon": "🇮🇹"
+    "phoneStartsWith": ["31", "32", "33"],
+    "icon": "🇮🇹",
   },
   {
     "code": 83,
@@ -1359,12 +1062,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+1-876",
     "hintText": "876-XXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "876",
-      "330",
-      "878"
-    ],
-    "icon": "🇯🇲"
+    "phoneStartsWith": ["876", "330", "878"],
+    "icon": "🇯🇲",
   },
   {
     "code": 84,
@@ -1373,12 +1072,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+81",
     "hintText": "80-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "80",
-      "90",
-      "50"
-    ],
-    "icon": "🇯🇵"
+    "phoneStartsWith": ["80", "90", "50"],
+    "icon": "🇯🇵",
   },
   {
     "code": 86,
@@ -1387,12 +1082,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+7",
     "hintText": "701-XXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "701",
-      "702",
-      "705"
-    ],
-    "icon": "🇰🇿"
+    "phoneStartsWith": ["701", "702", "705"],
+    "icon": "🇰🇿",
   },
   {
     "code": 87,
@@ -1401,12 +1092,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+254",
     "hintText": "7-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "7",
-      "20",
-      "77"
-    ],
-    "icon": "🇰🇪"
+    "phoneStartsWith": ["7", "20", "77"],
+    "icon": "🇰🇪",
   },
   {
     "code": 88,
@@ -1415,12 +1102,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+686",
     "hintText": "20-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "20",
-      "21",
-      "22"
-    ],
-    "icon": "🇰🇮"
+    "phoneStartsWith": ["20", "21", "22"],
+    "icon": "🇰🇮",
   },
 
   {
@@ -1430,12 +1113,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+996",
     "hintText": "50-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "50",
-      "55",
-      "70"
-    ],
-    "icon": "🇰🇬"
+    "phoneStartsWith": ["50", "55", "70"],
+    "icon": "🇰🇬",
   },
   {
     "code": 91,
@@ -1444,12 +1123,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+856",
     "hintText": "20-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "20",
-      "21",
-      "30"
-    ],
-    "icon": "🇱🇦"
+    "phoneStartsWith": ["20", "21", "30"],
+    "icon": "🇱🇦",
   },
   {
     "code": 92,
@@ -1458,12 +1133,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+371",
     "hintText": "20-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "20",
-      "21",
-      "22"
-    ],
-    "icon": "🇱🇻"
+    "phoneStartsWith": ["20", "21", "22"],
+    "icon": "🇱🇻",
   },
 
   {
@@ -1473,12 +1144,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+266",
     "hintText": "5-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "5",
-      "6",
-      "7"
-    ],
-    "icon": "🇱🇸"
+    "phoneStartsWith": ["5", "6", "7"],
+    "icon": "🇱🇸",
   },
   {
     "code": 95,
@@ -1487,12 +1154,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+231",
     "hintText": "4-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "4",
-      "5",
-      "6"
-    ],
-    "icon": "🇱🇷"
+    "phoneStartsWith": ["4", "5", "6"],
+    "icon": "🇱🇷",
   },
 
   {
@@ -1502,12 +1165,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+423",
     "hintText": "5-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "5",
-      "6",
-      "7"
-    ],
-    "icon": "🇱🇮"
+    "phoneStartsWith": ["5", "6", "7"],
+    "icon": "🇱🇮",
   },
   {
     "code": 98,
@@ -1516,12 +1175,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+370",
     "hintText": "6-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "8"
-    ],
-    "icon": "🇱🇹"
+    "phoneStartsWith": ["6", "7", "8"],
+    "icon": "🇱🇹",
   },
   {
     "code": 99,
@@ -1530,12 +1185,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+352",
     "hintText": "2-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "2",
-      "4",
-      "6"
-    ],
-    "icon": "🇱🇺"
+    "phoneStartsWith": ["2", "4", "6"],
+    "icon": "🇱🇺",
   },
   {
     "code": 100,
@@ -1544,12 +1195,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+261",
     "hintText": "32-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "32",
-      "33",
-      "34"
-    ],
-    "icon": "🇲🇬"
+    "phoneStartsWith": ["32", "33", "34"],
+    "icon": "🇲🇬",
   },
   {
     "code": 101,
@@ -1558,12 +1205,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+265",
     "hintText": "88-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "88",
-      "99",
-      "21"
-    ],
-    "icon": "🇲🇼"
+    "phoneStartsWith": ["88", "99", "21"],
+    "icon": "🇲🇼",
   },
   {
     "code": 102,
@@ -1572,12 +1215,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+60",
     "hintText": "10-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "10",
-      "11",
-      "12"
-    ],
-    "icon": "🇲🇾"
+    "phoneStartsWith": ["10", "11", "12"],
+    "icon": "🇲🇾",
   },
   {
     "code": 103,
@@ -1586,12 +1225,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+960",
     "hintText": "7-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "7",
-      "9",
-      "3"
-    ],
-    "icon": "🇲🇻"
+    "phoneStartsWith": ["7", "9", "3"],
+    "icon": "🇲🇻",
   },
   {
     "code": 104,
@@ -1600,12 +1235,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+223",
     "hintText": "6-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "8"
-    ],
-    "icon": "🇲🇱"
+    "phoneStartsWith": ["6", "7", "8"],
+    "icon": "🇲🇱",
   },
   {
     "code": 105,
@@ -1614,12 +1245,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+356",
     "hintText": "77-XXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "77",
-      "79",
-      "9"
-    ],
-    "icon": "🇲🇹"
+    "phoneStartsWith": ["77", "79", "9"],
+    "icon": "🇲🇹",
   },
   {
     "code": 106,
@@ -1628,12 +1255,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+692",
     "hintText": "235-XXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "235",
-      "550",
-      "625"
-    ],
-    "icon": "🇲🇭"
+    "phoneStartsWith": ["235", "550", "625"],
+    "icon": "🇲🇭",
   },
 
   {
@@ -1643,12 +1266,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+230",
     "hintText": "5-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "5",
-      "7",
-      "9"
-    ],
-    "icon": "🇲🇺"
+    "phoneStartsWith": ["5", "7", "9"],
+    "icon": "🇲🇺",
   },
   {
     "code": 109,
@@ -1657,12 +1276,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+52",
     "hintText": "55-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "55",
-      "56",
-      "33"
-    ],
-    "icon": "🇲🇽"
+    "phoneStartsWith": ["55", "56", "33"],
+    "icon": "🇲🇽",
   },
   {
     "code": 110,
@@ -1671,12 +1286,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+691",
     "hintText": "920-XXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "920",
-      "921",
-      "922"
-    ],
-    "icon": "🇫🇲"
+    "phoneStartsWith": ["920", "921", "922"],
+    "icon": "🇫🇲",
   },
   {
     "code": 111,
@@ -1685,12 +1296,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+373",
     "hintText": "6-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "9"
-    ],
-    "icon": "🇲🇩"
+    "phoneStartsWith": ["6", "7", "9"],
+    "icon": "🇲🇩",
   },
   {
     "code": 112,
@@ -1699,12 +1306,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+377",
     "hintText": "6-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "9"
-    ],
-    "icon": "🇲🇨"
+    "phoneStartsWith": ["6", "7", "9"],
+    "icon": "🇲🇨",
   },
   {
     "code": 113,
@@ -1713,12 +1316,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+976",
     "hintText": "8-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "8",
-      "9",
-      "11"
-    ],
-    "icon": "🇲🇳"
+    "phoneStartsWith": ["8", "9", "11"],
+    "icon": "🇲🇳",
   },
   {
     "code": 114,
@@ -1727,12 +1326,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+382",
     "hintText": "66-XXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "66",
-      "67",
-      "68"
-    ],
-    "icon": "🇲🇪"
+    "phoneStartsWith": ["66", "67", "68"],
+    "icon": "🇲🇪",
   },
 
   {
@@ -1742,12 +1337,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+258",
     "hintText": "82-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "82",
-      "84",
-      "85"
-    ],
-    "icon": "🇲🇿"
+    "phoneStartsWith": ["82", "84", "85"],
+    "icon": "🇲🇿",
   },
   {
     "code": 117,
@@ -1756,12 +1347,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+95",
     "hintText": "9-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "9",
-      "6",
-      "7"
-    ],
-    "icon": "🇲🇲"
+    "phoneStartsWith": ["9", "6", "7"],
+    "icon": "🇲🇲",
   },
   {
     "code": 118,
@@ -1770,12 +1357,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+260",
     "hintText": "60-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "60",
-      "81",
-      "82"
-    ],
-    "icon": "🇳🇦"
+    "phoneStartsWith": ["60", "81", "82"],
+    "icon": "🇳🇦",
   },
   {
     "code": 119,
@@ -1784,12 +1367,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+674",
     "hintText": "557-XXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "557",
-      "558",
-      "559"
-    ],
-    "icon": "🇳🇷"
+    "phoneStartsWith": ["557", "558", "559"],
+    "icon": "🇳🇷",
   },
   {
     "code": 120,
@@ -1798,12 +1377,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+977",
     "hintText": "98-XXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "98",
-      "99",
-      "980"
-    ],
-    "icon": "🇳🇵"
+    "phoneStartsWith": ["98", "99", "980"],
+    "icon": "🇳🇵",
   },
   {
     "code": 121,
@@ -1812,12 +1387,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+31",
     "hintText": "6-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "6",
-      "61",
-      "62"
-    ],
-    "icon": "🇳🇱"
+    "phoneStartsWith": ["6", "61", "62"],
+    "icon": "🇳🇱",
   },
   {
     "code": 122,
@@ -1826,12 +1397,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+64",
     "hintText": "20-XXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "20",
-      "21",
-      "22"
-    ],
-    "icon": "🇳🇿"
+    "phoneStartsWith": ["20", "21", "22"],
+    "icon": "🇳🇿",
   },
   {
     "code": 123,
@@ -1840,12 +1407,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+505",
     "hintText": "8-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "8",
-      "8",
-      "8"
-    ],
-    "icon": "🇳🇮"
+    "phoneStartsWith": ["8", "8", "8"],
+    "icon": "🇳🇮",
   },
   {
     "code": 124,
@@ -1854,12 +1417,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+227",
     "hintText": "92-XXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "92",
-      "93",
-      "94"
-    ],
-    "icon": "🇳🇪"
+    "phoneStartsWith": ["92", "93", "94"],
+    "icon": "🇳🇪",
   },
   {
     "code": 125,
@@ -1868,12 +1427,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+234",
     "hintText": "70-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "70",
-      "80",
-      "90"
-    ],
-    "icon": "🇳🇬"
+    "phoneStartsWith": ["70", "80", "90"],
+    "icon": "🇳🇬",
   },
   {
     "code": 126,
@@ -1882,12 +1437,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+850",
     "hintText": "1912-XXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "1912",
-      "1921",
-      "1922"
-    ],
-    "icon": "🇰🇵"
+    "phoneStartsWith": ["1912", "1921", "1922"],
+    "icon": "🇰🇵",
   },
   {
     "code": 127,
@@ -1896,12 +1447,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+389",
     "hintText": "70-XXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "70",
-      "71",
-      "75"
-    ],
-    "icon": "🇲🇰"
+    "phoneStartsWith": ["70", "71", "75"],
+    "icon": "🇲🇰",
   },
   {
     "code": 128,
@@ -1910,12 +1457,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+47",
     "hintText": "40-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "40",
-      "41",
-      "45"
-    ],
-    "icon": "🇳🇴"
+    "phoneStartsWith": ["40", "41", "45"],
+    "icon": "🇳🇴",
   },
 
   {
@@ -1925,12 +1468,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+92",
     "hintText": "30-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "30",
-      "31",
-      "32"
-    ],
-    "icon": "🇵🇰"
+    "phoneStartsWith": ["30", "31", "32"],
+    "icon": "🇵🇰",
   },
   {
     "code": 131,
@@ -1939,12 +1478,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+680",
     "hintText": "620-XXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "620",
-      "621",
-      "622"
-    ],
-    "icon": "🇵🇼"
+    "phoneStartsWith": ["620", "621", "622"],
+    "icon": "🇵🇼",
   },
   {
     "code": 132,
@@ -1953,12 +1488,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+507",
     "hintText": "60-XXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "60",
-      "61",
-      "63"
-    ],
-    "icon": "🇵🇦"
+    "phoneStartsWith": ["60", "61", "63"],
+    "icon": "🇵🇦",
   },
   {
     "code": 133,
@@ -1967,12 +1498,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+675",
     "hintText": "70-XXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "70",
-      "71",
-      "72"
-    ],
-    "icon": "🇵🇬"
+    "phoneStartsWith": ["70", "71", "72"],
+    "icon": "🇵🇬",
   },
   {
     "code": 134,
@@ -1981,12 +1508,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+595",
     "hintText": "09-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "09",
-      "099",
-      "097"
-    ],
-    "icon": "🇵🇾"
+    "phoneStartsWith": ["09", "099", "097"],
+    "icon": "🇵🇾",
   },
   {
     "code": 135,
@@ -1995,12 +1518,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+51",
     "hintText": "91-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "91",
-      "92",
-      "93"
-    ],
-    "icon": "🇵🇪"
+    "phoneStartsWith": ["91", "92", "93"],
+    "icon": "🇵🇪",
   },
   {
     "code": 136,
@@ -2009,12 +1528,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+63",
     "hintText": "905-XXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "905",
-      "906",
-      "915"
-    ],
-    "icon": "🇵🇭"
+    "phoneStartsWith": ["905", "906", "915"],
+    "icon": "🇵🇭",
   },
   {
     "code": 137,
@@ -2023,12 +1538,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+48",
     "hintText": "50-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "50",
-      "51",
-      "52"
-    ],
-    "icon": "🇵🇱"
+    "phoneStartsWith": ["50", "51", "52"],
+    "icon": "🇵🇱",
   },
   {
     "code": 138,
@@ -2037,14 +1548,9 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+351",
     "hintText": "91-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "91",
-      "92",
-      "93"
-    ],
-    "icon": "🇵🇹"
+    "phoneStartsWith": ["91", "92", "93"],
+    "icon": "🇵🇹",
   },
-
 
   {
     "code": 140,
@@ -2053,12 +1559,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+40",
     "hintText": "71-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "71",
-      "72",
-      "73"
-    ],
-    "icon": "🇷🇴"
+    "phoneStartsWith": ["71", "72", "73"],
+    "icon": "🇷🇴",
   },
   {
     "code": 141,
@@ -2067,12 +1569,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+7",
     "hintText": "910-XXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "910",
-      "920",
-      "930"
-    ],
-    "icon": "🇷🇺"
+    "phoneStartsWith": ["910", "920", "930"],
+    "icon": "🇷🇺",
   },
   {
     "code": 142,
@@ -2081,12 +1579,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+250",
     "hintText": "72-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "72",
-      "73",
-      "78"
-    ],
-    "icon": "🇷🇼"
+    "phoneStartsWith": ["72", "73", "78"],
+    "icon": "🇷🇼",
   },
   {
     "code": 143,
@@ -2095,12 +1589,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+1-869",
     "hintText": "869-XXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "869",
-      "465",
-      "661"
-    ],
-    "icon": "🇰🇳"
+    "phoneStartsWith": ["869", "465", "661"],
+    "icon": "🇰🇳",
   },
   {
     "code": 144,
@@ -2109,12 +1599,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+1-758",
     "hintText": "758-XXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "758",
-      "484",
-      "631"
-    ],
-    "icon": "🇱🇨"
+    "phoneStartsWith": ["758", "484", "631"],
+    "icon": "🇱🇨",
   },
   {
     "code": 145,
@@ -2123,12 +1609,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+1-784",
     "hintText": "784-XXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "784",
-      "457",
-      "529"
-    ],
-    "icon": "🇻🇨"
+    "phoneStartsWith": ["784", "457", "529"],
+    "icon": "🇻🇨",
   },
   {
     "code": 146,
@@ -2137,12 +1619,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+685",
     "hintText": "7-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "7",
-      "77",
-      "78"
-    ],
-    "icon": "🇼🇸"
+    "phoneStartsWith": ["7", "77", "78"],
+    "icon": "🇼🇸",
   },
   {
     "code": 147,
@@ -2151,12 +1629,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+378",
     "hintText": "3-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "3",
-      "4",
-      "6"
-    ],
-    "icon": "🇸🇲"
+    "phoneStartsWith": ["3", "4", "6"],
+    "icon": "🇸🇲",
   },
   {
     "code": 148,
@@ -2165,12 +1639,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+239",
     "hintText": "98-XXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "98",
-      "99",
-      "982"
-    ],
-    "icon": "🇸🇹"
+    "phoneStartsWith": ["98", "99", "982"],
+    "icon": "🇸🇹",
   },
 
   {
@@ -2180,12 +1650,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+221",
     "hintText": "70-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "70",
-      "76",
-      "77"
-    ],
-    "icon": "🇸🇳"
+    "phoneStartsWith": ["70", "76", "77"],
+    "icon": "🇸🇳",
   },
   {
     "code": 151,
@@ -2194,12 +1660,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+381",
     "hintText": "60-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "60",
-      "61",
-      "62"
-    ],
-    "icon": "🇷🇸"
+    "phoneStartsWith": ["60", "61", "62"],
+    "icon": "🇷🇸",
   },
   {
     "code": 152,
@@ -2208,12 +1670,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+248",
     "hintText": "2-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "2",
-      "5",
-      "7"
-    ],
-    "icon": "🇸🇨"
+    "phoneStartsWith": ["2", "5", "7"],
+    "icon": "🇸🇨",
   },
   {
     "code": 153,
@@ -2222,12 +1680,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+232",
     "hintText": "76-XXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "76",
-      "77",
-      "78"
-    ],
-    "icon": "🇸🇱"
+    "phoneStartsWith": ["76", "77", "78"],
+    "icon": "🇸🇱",
   },
   {
     "code": 154,
@@ -2236,12 +1690,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+65",
     "hintText": "8-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "8",
-      "9",
-      "6"
-    ],
-    "icon": "🇸🇬"
+    "phoneStartsWith": ["8", "9", "6"],
+    "icon": "🇸🇬",
   },
   {
     "code": 155,
@@ -2250,12 +1700,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+421",
     "hintText": "90-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "90",
-      "91",
-      "92"
-    ],
-    "icon": "🇸🇰"
+    "phoneStartsWith": ["90", "91", "92"],
+    "icon": "🇸🇰",
   },
   {
     "code": 156,
@@ -2264,12 +1710,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+386",
     "hintText": "30-XXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "30",
-      "31",
-      "40"
-    ],
-    "icon": "🇸🇮"
+    "phoneStartsWith": ["30", "31", "40"],
+    "icon": "🇸🇮",
   },
   {
     "code": 157,
@@ -2278,12 +1720,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+677",
     "hintText": "74-XXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "74",
-      "75",
-      "76"
-    ],
-    "icon": "🇸🇧"
+    "phoneStartsWith": ["74", "75", "76"],
+    "icon": "🇸🇧",
   },
 
   {
@@ -2293,12 +1731,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+27",
     "hintText": "60-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "60",
-      "61",
-      "62"
-    ],
-    "icon": "🇿🇦"
+    "phoneStartsWith": ["60", "61", "62"],
+    "icon": "🇿🇦",
   },
   {
     "code": 160,
@@ -2307,12 +1741,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+82",
     "hintText": "10-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "10",
-      "11",
-      "12"
-    ],
-    "icon": "🇰🇷"
+    "phoneStartsWith": ["10", "11", "12"],
+    "icon": "🇰🇷",
   },
 
   {
@@ -2322,12 +1752,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+34",
     "hintText": "60-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "60",
-      "61",
-      "62"
-    ],
-    "icon": "🇪🇸"
+    "phoneStartsWith": ["60", "61", "62"],
+    "icon": "🇪🇸",
   },
   {
     "code": 163,
@@ -2336,12 +1762,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+94",
     "hintText": "70-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "70",
-      "71",
-      "72"
-    ],
-    "icon": "🇱🇰"
+    "phoneStartsWith": ["70", "71", "72"],
+    "icon": "🇱🇰",
   },
 
   {
@@ -2351,12 +1773,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+597",
     "hintText": "6-XXXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "8"
-    ],
-    "icon": "🇸🇷"
+    "phoneStartsWith": ["6", "7", "8"],
+    "icon": "🇸🇷",
   },
   {
     "code": 166,
@@ -2365,12 +1783,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+268",
     "hintText": "6-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "8"
-    ],
-    "icon": "🇸🇿"
+    "phoneStartsWith": ["6", "7", "8"],
+    "icon": "🇸🇿",
   },
   {
     "code": 167,
@@ -2379,12 +1793,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+46",
     "hintText": "70-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "70",
-      "71",
-      "72"
-    ],
-    "icon": "🇸🇪"
+    "phoneStartsWith": ["70", "71", "72"],
+    "icon": "🇸🇪",
   },
   {
     "code": 168,
@@ -2393,12 +1803,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+41",
     "hintText": "74-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "74",
-      "75",
-      "76"
-    ],
-    "icon": "🇨🇭"
+    "phoneStartsWith": ["74", "75", "76"],
+    "icon": "🇨🇭",
   },
 
   {
@@ -2408,12 +1814,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+886",
     "hintText": "9-XXXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "9",
-      "9",
-      "9"
-    ],
-    "icon": "🇹🇼"
+    "phoneStartsWith": ["9", "9", "9"],
+    "icon": "🇹🇼",
   },
   {
     "code": 171,
@@ -2422,12 +1824,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+992",
     "hintText": "90-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "90",
-      "91",
-      "92"
-    ],
-    "icon": "🇹🇯"
+    "phoneStartsWith": ["90", "91", "92"],
+    "icon": "🇹🇯",
   },
   {
     "code": 172,
@@ -2436,12 +1834,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+255",
     "hintText": "62-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "62",
-      "68",
-      "71"
-    ],
-    "icon": "🇹🇿"
+    "phoneStartsWith": ["62", "68", "71"],
+    "icon": "🇹🇿",
   },
   {
     "code": 173,
@@ -2450,12 +1844,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+66",
     "hintText": "6-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "6",
-      "8",
-      "9"
-    ],
-    "icon": "🇹🇭"
+    "phoneStartsWith": ["6", "8", "9"],
+    "icon": "🇹🇭",
   },
   {
     "code": 174,
@@ -2464,12 +1854,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+228",
     "hintText": "90-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "90",
-      "91",
-      "92"
-    ],
-    "icon": "🇹🇬"
+    "phoneStartsWith": ["90", "91", "92"],
+    "icon": "🇹🇬",
   },
   {
     "code": 175,
@@ -2478,12 +1864,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+1-868",
     "hintText": "868-XXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "868",
-      "480",
-      "640"
-    ],
-    "icon": "🇹🇹"
+    "phoneStartsWith": ["868", "480", "640"],
+    "icon": "🇹🇹",
   },
 
   {
@@ -2493,12 +1875,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+90",
     "hintText": "50-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "50",
-      "51",
-      "52"
-    ],
-    "icon": "🇹🇷"
+    "phoneStartsWith": ["50", "51", "52"],
+    "icon": "🇹🇷",
   },
   {
     "code": 179,
@@ -2507,12 +1885,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+993",
     "hintText": "6-XXXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "6",
-      "7",
-      "8"
-    ],
-    "icon": "🇹🇲"
+    "phoneStartsWith": ["6", "7", "8"],
+    "icon": "🇹🇲",
   },
   {
     "code": 180,
@@ -2521,12 +1895,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+688",
     "hintText": "90-XXX",
     "lengthNumber": 5,
-    "phoneStartsWith": [
-      "90",
-      "91",
-      "92"
-    ],
-    "icon": "🇹🇻"
+    "phoneStartsWith": ["90", "91", "92"],
+    "icon": "🇹🇻",
   },
   {
     "code": 181,
@@ -2535,12 +1905,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+256",
     "hintText": "70-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "70",
-      "71",
-      "75"
-    ],
-    "icon": "🇺🇬"
+    "phoneStartsWith": ["70", "71", "75"],
+    "icon": "🇺🇬",
   },
   {
     "code": 182,
@@ -2549,12 +1915,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+380",
     "hintText": "39-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "39",
-      "50",
-      "63"
-    ],
-    "icon": "🇺🇦"
+    "phoneStartsWith": ["39", "50", "63"],
+    "icon": "🇺🇦",
   },
 
   {
@@ -2564,12 +1926,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+44",
     "hintText": "20-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "20",
-      "74",
-      "75"
-    ],
-    "icon": "🇬🇧"
+    "phoneStartsWith": ["20", "74", "75"],
+    "icon": "🇬🇧",
   },
   {
     "code": 185,
@@ -2578,12 +1936,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+1",
     "hintText": "201-XXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "201",
-      "202",
-      "203"
-    ],
-    "icon": "🇺🇸"
+    "phoneStartsWith": ["201", "202", "203"],
+    "icon": "🇺🇸",
   },
   {
     "code": 186,
@@ -2592,12 +1946,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+598",
     "hintText": "91-XXXXX",
     "lengthNumber": 8,
-    "phoneStartsWith": [
-      "91",
-      "92",
-      "93"
-    ],
-    "icon": "🇺🇾"
+    "phoneStartsWith": ["91", "92", "93"],
+    "icon": "🇺🇾",
   },
   {
     "code": 187,
@@ -2606,12 +1956,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+998",
     "hintText": "90-XXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "90",
-      "91",
-      "92"
-    ],
-    "icon": "🇺🇿"
+    "phoneStartsWith": ["90", "91", "92"],
+    "icon": "🇺🇿",
   },
   {
     "code": 188,
@@ -2620,12 +1966,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+678",
     "hintText": "5-XXXXX",
     "lengthNumber": 7,
-    "phoneStartsWith": [
-      "5",
-      "7",
-      "9"
-    ],
-    "icon": "🇻🇺"
+    "phoneStartsWith": ["5", "7", "9"],
+    "icon": "🇻🇺",
   },
   {
     "code": 189,
@@ -2634,12 +1976,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+39",
     "hintText": "33-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "33",
-      "34",
-      "35"
-    ],
-    "icon": "🇻🇦"
+    "phoneStartsWith": ["33", "34", "35"],
+    "icon": "🇻🇦",
   },
   {
     "code": 190,
@@ -2648,12 +1986,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+58",
     "hintText": "41-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "41",
-      "42",
-      "43"
-    ],
-    "icon": "🇻🇪"
+    "phoneStartsWith": ["41", "42", "43"],
+    "icon": "🇻🇪",
   },
   {
     "code": 191,
@@ -2662,12 +1996,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+84",
     "hintText": "90-XXXXXXXX",
     "lengthNumber": 10,
-    "phoneStartsWith": [
-      "90",
-      "91",
-      "92"
-    ],
-    "icon": "🇻🇳"
+    "phoneStartsWith": ["90", "91", "92"],
+    "icon": "🇻🇳",
   },
 
   {
@@ -2677,12 +2007,8 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+260",
     "hintText": "95-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "95",
-      "96",
-      "97"
-    ],
-    "icon": "🇿🇲"
+    "phoneStartsWith": ["95", "96", "97"],
+    "icon": "🇿🇲",
   },
   {
     "code": 194,
@@ -2691,11 +2017,7 @@ const List<Map<String, dynamic>> codes = [
     "dialCode": "+263",
     "hintText": "71-XXXXXXX",
     "lengthNumber": 9,
-    "phoneStartsWith": [
-      "71",
-      "73",
-      "77"
-    ],
-    "icon": "🇿🇼"
-  }
+    "phoneStartsWith": ["71", "73", "77"],
+    "icon": "🇿🇼",
+  },
 ];

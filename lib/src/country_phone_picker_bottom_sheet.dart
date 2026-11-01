@@ -99,9 +99,7 @@ class _CountryPhonePickerBottomSheetState
     final position = _scrollController.position;
     // The search field sits directly above the list, so lifting the selected
     // row by two more countries keeps it from looking glued to the search bar.
-    final headroom = _searchEnabled
-        ? 2 * (itemExtent + separatorExtent)
-        : 0.0;
+    final headroom = _searchEnabled ? 2 * (itemExtent + separatorExtent) : 0.0;
     final target =
         index * (itemExtent + separatorExtent) -
         (position.viewportDimension - itemExtent) * alignment -
@@ -127,8 +125,10 @@ class _CountryPhonePickerBottomSheetState
       if (headroom > 0 && _scrollController.hasClients) {
         final settled = _scrollController.position;
         _scrollController.jumpTo(
-          (_scrollController.offset - headroom)
-              .clamp(settled.minScrollExtent, settled.maxScrollExtent),
+          (_scrollController.offset - headroom).clamp(
+            settled.minScrollExtent,
+            settled.maxScrollExtent,
+          ),
         );
       }
     });
@@ -202,39 +202,40 @@ class _CountryPhonePickerBottomSheetState
         ],
         _listArea(
           config: config,
-          child: _visibleCountries.isEmpty
-              ? _emptyResultWidget(searchConfig)
-              : ListView.separated(
-                  controller: _scrollController,
-                  // The sheet bounds the list, so shrink wrapping still builds
-                  // rows lazily while letting a short list size the sheet.
-                  shrinkWrap: config.sizeToContent,
-                  itemCount: _visibleCountries.length,
-                  padding: config.listPadding,
-                  itemBuilder: (_, index) {
-                    final country = _visibleCountries[index];
-                    final row = _CountryRow(
-                      country: country,
-                      displayName:
-                          localizations?.translate(country.isoCode) ??
-                          country.name,
-                      selectedIsoCode: selectedIsoCode,
-                      config: config,
-                    );
-                    final key = _measureKeyFor(index, country);
-                    return key == null
-                        ? row
-                        : KeyedSubtree(key: key, child: row);
-                  },
-                  separatorBuilder: (BuildContext context, int index) {
-                    return index == 0
-                        ? KeyedSubtree(
+          child:
+              _visibleCountries.isEmpty
+                  ? _emptyResultWidget(searchConfig)
+                  : ListView.separated(
+                    controller: _scrollController,
+                    // The sheet bounds the list, so shrink wrapping still builds
+                    // rows lazily while letting a short list size the sheet.
+                    shrinkWrap: config.sizeToContent,
+                    itemCount: _visibleCountries.length,
+                    padding: config.listPadding,
+                    itemBuilder: (_, index) {
+                      final country = _visibleCountries[index];
+                      final row = _CountryRow(
+                        country: country,
+                        displayName:
+                            localizations?.translate(country.isoCode) ??
+                            country.name,
+                        selectedIsoCode: selectedIsoCode,
+                        config: config,
+                      );
+                      final key = _measureKeyFor(index, country);
+                      return key == null
+                          ? row
+                          : KeyedSubtree(key: key, child: row);
+                    },
+                    separatorBuilder: (BuildContext context, int index) {
+                      return index == 0
+                          ? KeyedSubtree(
                             key: _firstSeparatorKey,
                             child: config.separator,
                           )
-                        : config.separator;
-                  },
-                ),
+                          : config.separator;
+                    },
+                  ),
         ),
         SizedBox(height: config.bottomSpacing),
       ],
@@ -271,15 +272,16 @@ class _CountryPhonePickerBottomSheetState
   }
 
   Widget _searchField(SearchConfig searchConfig) {
-    final clearButton = searchConfig.showClearButton && _query.isNotEmpty
-        ? IconButton(
-            icon: searchConfig.clearIcon,
-            onPressed: () {
-              _searchController.clear();
-              _updateQuery('');
-            },
-          )
-        : null;
+    final clearButton =
+        searchConfig.showClearButton && _query.isNotEmpty
+            ? IconButton(
+              icon: searchConfig.clearIcon,
+              onPressed: () {
+                _searchController.clear();
+                _updateQuery('');
+              },
+            )
+            : null;
 
     final decoration =
         searchConfig.decoration ??
@@ -303,9 +305,10 @@ class _CountryPhonePickerBottomSheetState
       cursorColor: searchConfig.cursorColor,
       keyboardType: searchConfig.keyboardType,
       textInputAction: searchConfig.textInputAction,
-      decoration: decoration.suffixIcon == null
-          ? decoration.copyWith(suffixIcon: clearButton)
-          : decoration,
+      decoration:
+          decoration.suffixIcon == null
+              ? decoration.copyWith(suffixIcon: clearButton)
+              : decoration,
       onChanged: _updateQuery,
     );
 
@@ -378,20 +381,22 @@ class _CountryPhonePickerBottomSheetState
     final query = _query.trim().toLowerCase();
     final digitsQuery = CountryModel.digitsOnly(query);
 
-    return countriesList.where((country) {
-      final localizedName = localizations?.translate(country.isoCode);
-      final matchesName =
-          (localizedName?.toLowerCase().contains(query) ?? false) ||
-          country.nameLower.contains(query) ||
-          country.isoLower.contains(query);
+    return countriesList
+        .where((country) {
+          final localizedName = localizations?.translate(country.isoCode);
+          final matchesName =
+              (localizedName?.toLowerCase().contains(query) ?? false) ||
+              country.nameLower.contains(query) ||
+              country.isoLower.contains(query);
 
-      if (matchesName) {
-        return true;
-      }
+          if (matchesName) {
+            return true;
+          }
 
-      return digitsQuery.isNotEmpty &&
-          country.dialDigits.contains(digitsQuery);
-    }).toList(growable: false);
+          return digitsQuery.isNotEmpty &&
+              country.dialDigits.contains(digitsQuery);
+        })
+        .toList(growable: false);
   }
 }
 
@@ -455,18 +460,20 @@ class _KeyboardAwareSheetSizeState extends State<_KeyboardAwareSheetSize> {
       builder: (context, constraints) {
         final size = MediaQuery.sizeOf(context);
         final padding = MediaQuery.paddingOf(context);
-        final keyboardInset = widget.offsetForKeyboard
-            ? MediaQuery.viewInsetsOf(context).bottom
-            : 0.0;
+        final keyboardInset =
+            widget.offsetForKeyboard
+                ? MediaQuery.viewInsetsOf(context).bottom
+                : 0.0;
         final available = math.min(
           size.height - padding.top,
           constraints.maxHeight.isFinite
               ? constraints.maxHeight
               : double.infinity,
         );
-        final factor = widget.expanded
-            ? widget.config.expandedHeightFactor
-            : widget.config.initialHeightFactor;
+        final factor =
+            widget.expanded
+                ? widget.config.expandedHeightFactor
+                : widget.config.initialHeightFactor;
         // The keyboard is added on top of the requested fraction so the list
         // keeps its size, then clamped so the sheet never exceeds the screen.
         final height = math.min(available * factor + keyboardInset, available);

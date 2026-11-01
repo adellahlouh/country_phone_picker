@@ -202,5 +202,7 @@ class BottomSheetConfig {
 }
 
 /// Former name of [BottomSheetConfig].
-@Deprecated('Renamed to BottomSheetConfig. Will be removed in a future release.')
+@Deprecated(
+  'Renamed to BottomSheetConfig. Will be removed in a future release.',
+)
 typedef CountryPhonePickerBottomSheetConfig = BottomSheetConfig;
