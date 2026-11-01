@@ -130,9 +130,7 @@ class _CountryPickerLocalizationsDelegate
 
   @override
   Future<CountryPickerLocalizations> load(Locale locale) async {
-    Locale effectiveLocale = enableLocalization
-        ? locale
-        : const Locale('en');
+    Locale effectiveLocale = enableLocalization ? locale : const Locale('en');
 
     CountryPickerLocalizations localizations = CountryPickerLocalizations(
       effectiveLocale,

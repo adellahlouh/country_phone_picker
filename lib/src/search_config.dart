@@ -5,7 +5,8 @@ import 'country_model.dart';
 /// Signature used to override how a country is matched against a search query.
 ///
 /// The [query] is passed exactly as typed by the user.
-typedef CountrySearchMatcher = bool Function(CountryModel country, String query);
+typedef CountrySearchMatcher =
+    bool Function(CountryModel country, String query);
 
 /// Controls the appearance and behavior of the search field inside the country
 /// picker bottom sheet.

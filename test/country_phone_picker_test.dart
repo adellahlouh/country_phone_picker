@@ -46,9 +46,12 @@ void main() {
     expect(countriesForIsoCodes(const []), all);
     expect(countriesForIsoCodes(const ['XX']), all);
     expect(
-      countriesForIsoCodes(const ['sa', 'JO', 'XX', 'JO'])
-          .map((country) => country.isoCode)
-          .toList(),
+      countriesForIsoCodes(const [
+        'sa',
+        'JO',
+        'XX',
+        'JO',
+      ]).map((country) => country.isoCode).toList(),
       ['SA', 'JO'],
     );
   });
@@ -71,9 +74,7 @@ void main() {
       MaterialApp(
         locale: const Locale('en'),
         supportedLocales: const [Locale('en')],
-        localizationsDelegates: const [
-          CountryPickerLocalizations.delegate,
-        ],
+        localizationsDelegates: const [CountryPickerLocalizations.delegate],
         home: Builder(
           builder: (context) {
             return Text(
@@ -543,9 +544,7 @@ void main() {
           body: CountryPhonePicker(
             bottomSheetTitle: 'Choose Country',
             initialCountryCode: 'US',
-            bottomSheetConfig: const BottomSheetConfig(
-              scrollToSelected: false,
-            ),
+            bottomSheetConfig: const BottomSheetConfig(scrollToSelected: false),
             onChanged: (_) {},
           ),
         ),
@@ -572,7 +571,9 @@ void main() {
     expect(_inList(find.text('+962')), findsOneWidget);
   });
 
-  testWidgets('hides the search field when showSearch is false', (tester) async {
+  testWidgets('hides the search field when showSearch is false', (
+    tester,
+  ) async {
     await tester.pumpWidget(_buildPicker(showSearch: false));
 
     await _openSheet(tester);
@@ -608,16 +609,16 @@ void main() {
   testWidgets('shows every country when the allowlist has no matches', (
     tester,
   ) async {
-    await tester.pumpWidget(
-      _buildPicker(allowedCountryCodes: const ['XX']),
-    );
+    await tester.pumpWidget(_buildPicker(allowedCountryCodes: const ['XX']));
 
     await _openSheet(tester);
 
     expect(_listItemCount(tester), countriesForIsoCodes(null).length);
   });
 
-  testWidgets('shows every country when the allowlist is empty', (tester) async {
+  testWidgets('shows every country when the allowlist is empty', (
+    tester,
+  ) async {
     await tester.pumpWidget(_buildPicker(allowedCountryCodes: const []));
 
     await _openSheet(tester);
@@ -630,49 +631,56 @@ void main() {
     final reordered = countriesWithPinnedFirst(all, const ['US', 'GB', 'FR']);
 
     expect(reordered.length, all.length);
-    expect(
-      reordered.take(3).map((country) => country.isoCode).toList(),
-      ['US', 'GB', 'FR'],
-    );
+    expect(reordered.take(3).map((country) => country.isoCode).toList(), [
+      'US',
+      'GB',
+      'FR',
+    ]);
     // Pinned codes are not duplicated: each appears once at the top.
-    expect(
-      reordered.where((country) => country.isoCode == 'US').length,
-      1,
-    );
-    expect(
-      reordered.where((country) => country.isoCode == 'FR').length,
-      1,
-    );
+    expect(reordered.where((country) => country.isoCode == 'US').length, 1);
+    expect(reordered.where((country) => country.isoCode == 'FR').length, 1);
   });
 
   test('countriesWithPinnedFirst skips unknown and duplicate codes', () {
     final all = countriesForIsoCodes(null);
-    final reordered =
-        countriesWithPinnedFirst(all, const ['sa', 'XX', 'SA', 'JO']);
+    final reordered = countriesWithPinnedFirst(all, const [
+      'sa',
+      'XX',
+      'SA',
+      'JO',
+    ]);
 
-    expect(
-      reordered.take(2).map((country) => country.isoCode).toList(),
-      ['SA', 'JO'],
-    );
+    expect(reordered.take(2).map((country) => country.isoCode).toList(), [
+      'SA',
+      'JO',
+    ]);
   });
 
-  test('countriesWithPinnedFirst leaves order unchanged when codes are null or empty',
-      () {
-    final all = countriesForIsoCodes(null);
-    expect(countriesWithPinnedFirst(all, null), all);
-    expect(countriesWithPinnedFirst(all, const []), all);
-    expect(countriesWithPinnedFirst(all, const ['XX']), all);
-  });
+  test(
+    'countriesWithPinnedFirst leaves order unchanged when codes are null or empty',
+    () {
+      final all = countriesForIsoCodes(null);
+      expect(countriesWithPinnedFirst(all, null), all);
+      expect(countriesWithPinnedFirst(all, const []), all);
+      expect(countriesWithPinnedFirst(all, const ['XX']), all);
+    },
+  );
 
   test('countriesWithPinnedFirst drops codes not present in the base list', () {
     final allowed = countriesForIsoCodes(const ['US', 'GB', 'FR', 'DE', 'JO']);
-    final reordered =
-        countriesWithPinnedFirst(allowed, const ['FR', 'ZZ', 'JO']);
+    final reordered = countriesWithPinnedFirst(allowed, const [
+      'FR',
+      'ZZ',
+      'JO',
+    ]);
 
-    expect(
-      reordered.map((country) => country.isoCode).toList(),
-      ['FR', 'JO', 'US', 'GB', 'DE'],
-    );
+    expect(reordered.map((country) => country.isoCode).toList(), [
+      'FR',
+      'JO',
+      'US',
+      'GB',
+      'DE',
+    ]);
   });
 
   testWidgets('pins country codes to the top of the list', (tester) async {
@@ -711,8 +719,9 @@ void main() {
     expect(_dialCodeOrder(tester), ['+33', '+962', '+1', '+44', '+49']);
   });
 
-  testWidgets('leaves order unchanged when pinnedCountryCodes is empty',
-      (tester) async {
+  testWidgets('leaves order unchanged when pinnedCountryCodes is empty', (
+    tester,
+  ) async {
     await tester.pumpWidget(
       _buildPicker(
         config: const BottomSheetConfig(scrollToSelected: false),
@@ -737,13 +746,8 @@ List<String> _dialCodeOrder(WidgetTester tester) {
     of: find.byType(ListView),
     matching: find.byWidgetPredicate(
       (widget) =>
-          widget is Text &&
-          widget.data != null &&
-          widget.data!.startsWith('+'),
+          widget is Text && widget.data != null && widget.data!.startsWith('+'),
     ),
   );
-  return tester
-      .widgetList<Text>(dialCodes)
-      .map((text) => text.data!)
-      .toList();
+  return tester.widgetList<Text>(dialCodes).map((text) => text.data!).toList();
 }

@@ -1,5 +1,8 @@
 # Country Phone Picker
 
+[![pub package](https://img.shields.io/pub/v/country_phone_picker.svg)](https://pub.dev/packages/country_phone_picker)
+[![CI](https://github.com/adellahlouh/country_phone_picker/actions/workflows/ci.yml/badge.svg)](https://github.com/adellahlouh/country_phone_picker/actions/workflows/ci.yml)
+
 A Flutter package for selecting countries with phone codes. It provides a bottom sheet picker with country flags, localized names, and dial codes — useful for phone number input forms.
 
 ## Features
